@@ -39,6 +39,12 @@
       "frameworks": {
         "net6.0-windows7.0": {
           "targetAlias": "net6.0-windows",
+          "dependencies": {
+            "Syncfusion.Core.WinForms": {
+              "target": "Package",
+              "version": "[19.4.0.54, )"
+            }
+          },
           "imports": [
             "net461",
             "net462",

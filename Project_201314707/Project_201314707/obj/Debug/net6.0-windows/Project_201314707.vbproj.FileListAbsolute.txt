@@ -16,3 +16,9 @@ D:\Documents\GitHub\Project_201314707\Project_201314707\Project_201314707\obj\De
 D:\Documents\GitHub\Project_201314707\Project_201314707\Project_201314707\obj\Debug\net6.0-windows\Project_201314707.pdb
 D:\Documents\GitHub\Project_201314707\Project_201314707\Project_201314707\obj\Debug\net6.0-windows\Project_201314707.genruntimeconfig.cache
 D:\Documents\GitHub\Project_201314707\Project_201314707\Project_201314707\obj\Debug\net6.0-windows\Project_201314707.Resources.resources
+D:\Documents\GitHub\Project_201314707\Project_201314707\Project_201314707\obj\Debug\net6.0-windows\Project_201314707.Login.resources
+D:\Documents\GitHub\Project_201314707\Project_201314707\Project_201314707\obj\Debug\net6.0-windows\Project_201314707.Register.resources
+D:\Documents\GitHub\Project_201314707\Project_201314707\Project_201314707\bin\Debug\net6.0-windows\Syncfusion.Core.WinForms.dll
+D:\Documents\GitHub\Project_201314707\Project_201314707\Project_201314707\bin\Debug\net6.0-windows\Syncfusion.Licensing.dll
+D:\Documents\GitHub\Project_201314707\Project_201314707\Project_201314707\bin\Debug\net6.0-windows\Syncfusion.Shared.Base.dll
+D:\Documents\GitHub\Project_201314707\Project_201314707\Project_201314707\obj\Debug\net6.0-windows\Project_201314707.vbproj.CopyComplete

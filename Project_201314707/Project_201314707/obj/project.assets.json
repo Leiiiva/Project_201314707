@@ -1,11 +1,141 @@
 {
   "version": 3,
   "targets": {
-    "net6.0-windows7.0": {}
+    "net6.0-windows7.0": {
+      "Syncfusion.Core.WinForms/19.4.0.54": {
+        "type": "package",
+        "dependencies": {
+          "Syncfusion.Licensing": "19.4.0.54",
+          "Syncfusion.Shared.Base": "19.4.0.54"
+        },
+        "compile": {
+          "lib/net5.0-windows7.0/Syncfusion.Core.WinForms.dll": {}
+        },
+        "runtime": {
+          "lib/net5.0-windows7.0/Syncfusion.Core.WinForms.dll": {}
+        }
+      },
+      "Syncfusion.Licensing/19.4.0.54": {
+        "type": "package",
+        "compile": {
+          "lib/net5.0/Syncfusion.Licensing.dll": {}
+        },
+        "runtime": {
+          "lib/net5.0/Syncfusion.Licensing.dll": {}
+        }
+      },
+      "Syncfusion.Shared.Base/19.4.0.54": {
+        "type": "package",
+        "dependencies": {
+          "Syncfusion.Licensing": "19.4.0.54"
+        },
+        "compile": {
+          "lib/net5.0-windows7.0/Syncfusion.Shared.Base.dll": {}
+        },
+        "runtime": {
+          "lib/net5.0-windows7.0/Syncfusion.Shared.Base.dll": {}
+        }
+      }
+    }
   },
-  "libraries": {},
+  "libraries": {
+    "Syncfusion.Core.WinForms/19.4.0.54": {
+      "sha512": "jbiCMjdKBiN1l0JzmmG6N2SGyiKlVbxE7F7DCCZ21H9zzug14buGENaTaid2bea+m6v16WNjuMz3X905L+J7oQ==",
+      "type": "package",
+      "path": "syncfusion.core.winforms/19.4.0.54",
+      "hasTools": true,
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "LICENSE.txt",
+        "README.md",
+        "lib/net40/Syncfusion.Core.WinForms.dll",
+        "lib/net40/Syncfusion.Core.WinForms.xml",
+        "lib/net45/Syncfusion.Core.WinForms.dll",
+        "lib/net45/Syncfusion.Core.WinForms.xml",
+        "lib/net451/Syncfusion.Core.WinForms.dll",
+        "lib/net451/Syncfusion.Core.WinForms.xml",
+        "lib/net46/Syncfusion.Core.WinForms.dll",
+        "lib/net46/Syncfusion.Core.WinForms.xml",
+        "lib/net5.0-windows7.0/Syncfusion.Core.WinForms.dll",
+        "lib/net5.0-windows7.0/Syncfusion.Core.WinForms.xml",
+        "lib/netcoreapp3.1/Syncfusion.Core.WinForms.dll",
+        "lib/netcoreapp3.1/Syncfusion.Core.WinForms.xml",
+        "syncfusion.core.winforms.19.4.0.54.nupkg.sha512",
+        "syncfusion.core.winforms.nuspec",
+        "syncfusion_logo.png",
+        "tools/VisualStudioToolsManifest.xml"
+      ]
+    },
+    "Syncfusion.Licensing/19.4.0.54": {
+      "sha512": "ZKnYgKckUHAIageDUUIoNdZjEAT+RRRaOPlYyBZn+MV5ZLjteODAjRuiDdK1iej9E26j4ui6e5HQ9iWkNUxHFw==",
+      "type": "package",
+      "path": "syncfusion.licensing/19.4.0.54",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "LICENSE.txt",
+        "lib/MonoAndroid10.0/Syncfusion.Licensing.dll",
+        "lib/MonoAndroid90/Syncfusion.Licensing.dll",
+        "lib/Xamarin.Mac/Syncfusion.Licensing.dll",
+        "lib/Xamarin.iOS10/Syncfusion.Licensing.dll",
+        "lib/net20/Syncfusion.Licensing.dll",
+        "lib/net35/Syncfusion.Licensing.dll",
+        "lib/net40/Syncfusion.Licensing.dll",
+        "lib/net45/Syncfusion.Licensing.dll",
+        "lib/net451/Syncfusion.Licensing.dll",
+        "lib/net46/Syncfusion.Licensing.dll",
+        "lib/net5.0-windows10.0/Syncfusion.Licensing.dll",
+        "lib/net5.0/Syncfusion.Licensing.dll",
+        "lib/netcoreapp3.1/Syncfusion.Licensing.dll",
+        "lib/netstandard1.0/Syncfusion.Licensing.dll",
+        "lib/netstandard1.2/Syncfusion.Licensing.dll",
+        "lib/netstandard1.4/Syncfusion.Licensing.dll",
+        "lib/netstandard2.0/Syncfusion.Licensing.dll",
+        "lib/portable-win+net45+wp80+win81+wpa81/Syncfusion.Licensing.dll",
+        "lib/uap10.0/Syncfusion.Licensing.dll",
+        "syncfusion.licensing.19.4.0.54.nupkg.sha512",
+        "syncfusion.licensing.nuspec",
+        "syncfusion_logo.png"
+      ]
+    },
+    "Syncfusion.Shared.Base/19.4.0.54": {
+      "sha512": "lzyk4/x+tFGkVQD4yDW0mq0hCslIRp97ZQnN0ikr3W5MIe2fWsz9jaJLA4z+sKb7TGNclO0Vxf3hZqCZ9PI7Tw==",
+      "type": "package",
+      "path": "syncfusion.shared.base/19.4.0.54",
+      "hasTools": true,
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "LICENSE.txt",
+        "README.md",
+        "lib/net20/Syncfusion.Shared.Base.dll",
+        "lib/net20/Syncfusion.Shared.Base.xml",
+        "lib/net35/Syncfusion.Shared.Base.dll",
+        "lib/net35/Syncfusion.Shared.Base.xml",
+        "lib/net40/Syncfusion.Shared.Base.dll",
+        "lib/net40/Syncfusion.Shared.Base.xml",
+        "lib/net45/Syncfusion.Shared.Base.dll",
+        "lib/net45/Syncfusion.Shared.Base.xml",
+        "lib/net451/Syncfusion.Shared.Base.dll",
+        "lib/net451/Syncfusion.Shared.Base.xml",
+        "lib/net46/Syncfusion.Shared.Base.dll",
+        "lib/net46/Syncfusion.Shared.Base.xml",
+        "lib/net5.0-windows7.0/Syncfusion.Shared.Base.dll",
+        "lib/net5.0-windows7.0/Syncfusion.Shared.Base.xml",
+        "lib/netcoreapp3.1/Syncfusion.Shared.Base.dll",
+        "lib/netcoreapp3.1/Syncfusion.Shared.Base.xml",
+        "syncfusion.shared.base.19.4.0.54.nupkg.sha512",
+        "syncfusion.shared.base.nuspec",
+        "syncfusion_logo.png",
+        "tools/VisualStudioToolsManifest.xml"
+      ]
+    }
+  },
   "projectFileDependencyGroups": {
-    "net6.0-windows7.0": []
+    "net6.0-windows7.0": [
+      "Syncfusion.Core.WinForms >= 19.4.0.54"
+    ]
   },
   "packageFolders": {
     "C:\\Users\\Leiva\\.nuget\\packages\\": {}
@@ -45,6 +175,12 @@
     "frameworks": {
       "net6.0-windows7.0": {
         "targetAlias": "net6.0-windows",
+        "dependencies": {
+          "Syncfusion.Core.WinForms": {
+            "target": "Package",
+            "version": "[19.4.0.54, )"
+          }
+        },
         "imports": [
           "net461",
           "net462",
