@@ -1,12 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "pMJNdl4Z0GZUzFN69DrT8RT7kUHmigMdNwxTI9dnTCpP1e5gPf+B+Lj21DERvzIko7Ua1YLKzbezYZDquUVV9g==",
+  "dgSpecHash": "+ygpP6lY/Z4FJb349zPy9RV4l2BMRI3AtzqVG/nlTJv8/pI2k8JlQ/F/cYzFBO1DnLFpdQ7jVMiy6ylUQm7Jfw==",
   "success": true,
   "projectFilePath": "D:\\Documents\\GitHub\\Project_201314707\\Project_201314707\\Project_201314707\\Project_201314707.vbproj",
-  "expectedPackageFiles": [
-    "C:\\Users\\Leiva\\.nuget\\packages\\syncfusion.core.winforms\\19.4.0.54\\syncfusion.core.winforms.19.4.0.54.nupkg.sha512",
-    "C:\\Users\\Leiva\\.nuget\\packages\\syncfusion.licensing\\19.4.0.54\\syncfusion.licensing.19.4.0.54.nupkg.sha512",
-    "C:\\Users\\Leiva\\.nuget\\packages\\syncfusion.shared.base\\19.4.0.54\\syncfusion.shared.base.19.4.0.54.nupkg.sha512"
-  ],
+  "expectedPackageFiles": [],
   "logs": []
 }

@@ -15,10 +15,6 @@
   </ItemGroup>
 
   <ItemGroup>
-    <PackageReference Include="Syncfusion.Core.WinForms" Version="19.4.0.54" />
-  </ItemGroup>
-
-  <ItemGroup>
     <Compile Update="My Project\Application.Designer.vb">
       <DesignTime>True</DesignTime>
       <AutoGen>True</AutoGen>

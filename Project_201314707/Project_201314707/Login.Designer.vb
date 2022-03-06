@@ -60,11 +60,11 @@ Partial Class Login
         'Label1
         '
         Me.Label1.AutoSize = True
-        Me.Label1.Font = New System.Drawing.Font("Acumin Pro", 9.749999!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point)
+        Me.Label1.Font = New System.Drawing.Font("Acumin Pro", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point)
         Me.Label1.ForeColor = System.Drawing.Color.FromArgb(CType(CType(218, Byte), Integer), CType(CType(222, Byte), Integer), CType(CType(212, Byte), Integer))
-        Me.Label1.Location = New System.Drawing.Point(3, 3)
+        Me.Label1.Location = New System.Drawing.Point(2, 3)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(63, 17)
+        Me.Label1.Size = New System.Drawing.Size(59, 16)
         Me.Label1.TabIndex = 17
         Me.Label1.Text = "Regresar"
         '
@@ -74,9 +74,9 @@ Partial Class Login
         Me.btn_back.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom
         Me.btn_back.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.btn_back.ForeColor = System.Drawing.Color.FromArgb(CType(CType(60, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(61, Byte), Integer))
-        Me.btn_back.Location = New System.Drawing.Point(8, 23)
+        Me.btn_back.Location = New System.Drawing.Point(16, 23)
         Me.btn_back.Name = "btn_back"
-        Me.btn_back.Size = New System.Drawing.Size(50, 50)
+        Me.btn_back.Size = New System.Drawing.Size(30, 30)
         Me.btn_back.TabIndex = 16
         Me.btn_back.UseVisualStyleBackColor = True
         '

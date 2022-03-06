@@ -5,61 +5,7 @@
   },
   "compilationOptions": {},
   "targets": {
-    ".NETCoreApp,Version=v6.0": {
-      "Syncfusion.Core.WinForms/19.4.0.54": {
-        "dependencies": {
-          "Syncfusion.Licensing": "19.4.0.54",
-          "Syncfusion.Shared.Base": "19.4.0.54"
-        },
-        "runtime": {
-          "lib/net5.0-windows7.0/Syncfusion.Core.WinForms.dll": {
-            "assemblyVersion": "19.4500.0.54",
-            "fileVersion": "19.4500.0.54"
-          }
-        }
-      },
-      "Syncfusion.Licensing/19.4.0.54": {
-        "runtime": {
-          "lib/net5.0/Syncfusion.Licensing.dll": {
-            "assemblyVersion": "19.4.0.54",
-            "fileVersion": "19.4.0.54"
-          }
-        }
-      },
-      "Syncfusion.Shared.Base/19.4.0.54": {
-        "dependencies": {
-          "Syncfusion.Licensing": "19.4.0.54"
-        },
-        "runtime": {
-          "lib/net5.0-windows7.0/Syncfusion.Shared.Base.dll": {
-            "assemblyVersion": "19.4500.0.54",
-            "fileVersion": "19.4500.0.54"
-          }
-        }
-      }
-    }
+    ".NETCoreApp,Version=v6.0": {}
   },
-  "libraries": {
-    "Syncfusion.Core.WinForms/19.4.0.54": {
-      "type": "package",
-      "serviceable": true,
-      "sha512": "sha512-jbiCMjdKBiN1l0JzmmG6N2SGyiKlVbxE7F7DCCZ21H9zzug14buGENaTaid2bea+m6v16WNjuMz3X905L+J7oQ==",
-      "path": "syncfusion.core.winforms/19.4.0.54",
-      "hashPath": "syncfusion.core.winforms.19.4.0.54.nupkg.sha512"
-    },
-    "Syncfusion.Licensing/19.4.0.54": {
-      "type": "package",
-      "serviceable": true,
-      "sha512": "sha512-ZKnYgKckUHAIageDUUIoNdZjEAT+RRRaOPlYyBZn+MV5ZLjteODAjRuiDdK1iej9E26j4ui6e5HQ9iWkNUxHFw==",
-      "path": "syncfusion.licensing/19.4.0.54",
-      "hashPath": "syncfusion.licensing.19.4.0.54.nupkg.sha512"
-    },
-    "Syncfusion.Shared.Base/19.4.0.54": {
-      "type": "package",
-      "serviceable": true,
-      "sha512": "sha512-lzyk4/x+tFGkVQD4yDW0mq0hCslIRp97ZQnN0ikr3W5MIe2fWsz9jaJLA4z+sKb7TGNclO0Vxf3hZqCZ9PI7Tw==",
-      "path": "syncfusion.shared.base/19.4.0.54",
-      "hashPath": "syncfusion.shared.base.19.4.0.54.nupkg.sha512"
-    }
-  }
+  "libraries": {}
 }
