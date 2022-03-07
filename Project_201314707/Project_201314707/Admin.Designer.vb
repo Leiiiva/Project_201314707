@@ -56,7 +56,7 @@ Partial Class Admin
         Me.lbl_admin.AutoSize = True
         Me.lbl_admin.Font = New System.Drawing.Font("Acumin Pro", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point)
         Me.lbl_admin.ForeColor = System.Drawing.Color.FromArgb(CType(CType(218, Byte), Integer), CType(CType(222, Byte), Integer), CType(CType(212, Byte), Integer))
-        Me.lbl_admin.Location = New System.Drawing.Point(153, 106)
+        Me.lbl_admin.Location = New System.Drawing.Point(153, 111)
         Me.lbl_admin.Name = "lbl_admin"
         Me.lbl_admin.Size = New System.Drawing.Size(54, 20)
         Me.lbl_admin.TabIndex = 16

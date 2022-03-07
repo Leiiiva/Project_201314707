@@ -18,3 +18,8 @@ D:\Documents\GitHub\Project_201314707\Project_201314707\Project_201314707\obj\De
 D:\Documents\GitHub\Project_201314707\Project_201314707\Project_201314707\obj\Debug\net6.0-windows\Project_201314707.Resources.resources
 D:\Documents\GitHub\Project_201314707\Project_201314707\Project_201314707\obj\Debug\net6.0-windows\Project_201314707.Login.resources
 D:\Documents\GitHub\Project_201314707\Project_201314707\Project_201314707\obj\Debug\net6.0-windows\Project_201314707.Register.resources
+D:\Documents\GitHub\Project_201314707\Project_201314707\Project_201314707\obj\Debug\net6.0-windows\Project_201314707.Admin.resources
+D:\Documents\GitHub\Project_201314707\Project_201314707\Project_201314707\obj\Debug\net6.0-windows\Project_201314707.M_artists.resources
+D:\Documents\GitHub\Project_201314707\Project_201314707\Project_201314707\obj\Debug\net6.0-windows\Project_201314707.M_songs.resources
+D:\Documents\GitHub\Project_201314707\Project_201314707\Project_201314707\obj\Debug\net6.0-windows\Project_201314707.M_users.resources
+D:\Documents\GitHub\Project_201314707\Project_201314707\Project_201314707\obj\Debug\net6.0-windows\Project_201314707.Reports.resources

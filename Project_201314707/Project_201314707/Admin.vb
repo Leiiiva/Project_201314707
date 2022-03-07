@@ -2,22 +2,22 @@
 
     Private Sub btn_musers_Click(sender As Object, e As EventArgs) Handles btn_musers.Click
         Me.Close()
-        'M_users.Visible = True
+        M_users.Visible = True
     End Sub
 
     Private Sub btn_msongs_Click(sender As Object, e As EventArgs) Handles btn_msongs.Click
         Me.Close()
-        'M_songs.Visible = True
+        M_songs.Visible = True
     End Sub
 
     Private Sub btn_martists_Click(sender As Object, e As EventArgs) Handles btn_martists.Click
         Me.Close()
-        'M_artists.Visible = True
+        M_artists.Visible = True
     End Sub
 
     Private Sub btn_reports_Click(sender As Object, e As EventArgs) Handles btn_reports.Click
         Me.Close()
-        'Reports.Visible = True
+        Reports.Visible = True
     End Sub
 
     Private Sub btn_logout_Click(sender As Object, e As EventArgs) Handles btn_logout.Click

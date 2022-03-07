@@ -28,4 +28,9 @@
         pb_status2.Visible = False
         pnl_start.Visible = True
     End Sub
+
+    Private Sub btn_admin_Click(sender As Object, e As EventArgs) Handles btn_admin.Click
+        Me.Visible = False
+        Admin.Visible = True
+    End Sub
 End Class

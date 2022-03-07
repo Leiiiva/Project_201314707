@@ -50,6 +50,7 @@ Partial Class Form1
         Me.pb_start = New System.Windows.Forms.PictureBox()
         Me.lbl_servidor = New System.Windows.Forms.Label()
         Me.btn_server = New System.Windows.Forms.Button()
+        Me.btn_admin = New System.Windows.Forms.Button()
         Me.pnl_top.SuspendLayout()
         CType(Me.pb_status2, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.pnl_left.SuspendLayout()
@@ -284,6 +285,7 @@ Partial Class Form1
         '
         'pnl_start
         '
+        Me.pnl_start.Controls.Add(Me.btn_admin)
         Me.pnl_start.Controls.Add(Me.pb_status1)
         Me.pnl_start.Controls.Add(Me.btn_register)
         Me.pnl_start.Controls.Add(Me.btn_login)
@@ -386,6 +388,18 @@ Partial Class Form1
         Me.btn_server.TabIndex = 1
         Me.btn_server.UseVisualStyleBackColor = True
         '
+        'btn_admin
+        '
+        Me.btn_admin.BackgroundImage = Global.Project_201314707.My.Resources.Resources.admin
+        Me.btn_admin.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom
+        Me.btn_admin.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btn_admin.ForeColor = System.Drawing.Color.FromArgb(CType(CType(60, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(61, Byte), Integer))
+        Me.btn_admin.Location = New System.Drawing.Point(637, 3)
+        Me.btn_admin.Name = "btn_admin"
+        Me.btn_admin.Size = New System.Drawing.Size(30, 30)
+        Me.btn_admin.TabIndex = 12
+        Me.btn_admin.UseVisualStyleBackColor = True
+        '
         'Form1
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(7.0!, 15.0!)
@@ -444,4 +458,5 @@ Partial Class Form1
     Friend WithEvents btn_mute As Button
     Friend WithEvents btn_cplaylist As Button
     Friend WithEvents btn_next As Button
+    Friend WithEvents btn_admin As Button
 End Class
