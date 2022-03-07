@@ -24,10 +24,6 @@ Partial Class Reports
     Private Sub InitializeComponent()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(Reports))
         Me.pnl_login = New System.Windows.Forms.Panel()
-        Me.Label1 = New System.Windows.Forms.Label()
-        Me.btn_back = New System.Windows.Forms.Button()
-        Me.btn_generate = New System.Windows.Forms.Button()
-        Me.pb_reports = New System.Windows.Forms.PictureBox()
         Me.grpbx_reports = New System.Windows.Forms.GroupBox()
         Me.rbtn_top3genre = New System.Windows.Forms.RadioButton()
         Me.rbtn_top3songs = New System.Windows.Forms.RadioButton()
@@ -35,9 +31,13 @@ Partial Class Reports
         Me.rbtn_playlistscreated = New System.Windows.Forms.RadioButton()
         Me.rbtn_timesinplaylist = New System.Windows.Forms.RadioButton()
         Me.rbtn_sngartist = New System.Windows.Forms.RadioButton()
+        Me.Label1 = New System.Windows.Forms.Label()
+        Me.btn_back = New System.Windows.Forms.Button()
+        Me.btn_generate = New System.Windows.Forms.Button()
+        Me.pb_reports = New System.Windows.Forms.PictureBox()
         Me.pnl_login.SuspendLayout()
-        CType(Me.pb_reports, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.grpbx_reports.SuspendLayout()
+        CType(Me.pb_reports, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'pnl_login
@@ -51,52 +51,6 @@ Partial Class Reports
         Me.pnl_login.Name = "pnl_login"
         Me.pnl_login.Size = New System.Drawing.Size(361, 457)
         Me.pnl_login.TabIndex = 6
-        '
-        'Label1
-        '
-        Me.Label1.AutoSize = True
-        Me.Label1.Font = New System.Drawing.Font("Acumin Pro", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point)
-        Me.Label1.ForeColor = System.Drawing.Color.FromArgb(CType(CType(218, Byte), Integer), CType(CType(222, Byte), Integer), CType(CType(212, Byte), Integer))
-        Me.Label1.Location = New System.Drawing.Point(2, 3)
-        Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(59, 16)
-        Me.Label1.TabIndex = 15
-        Me.Label1.Text = "Regresar"
-        '
-        'btn_back
-        '
-        Me.btn_back.BackgroundImage = Global.Project_201314707.My.Resources.Resources.back
-        Me.btn_back.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom
-        Me.btn_back.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.btn_back.ForeColor = System.Drawing.Color.FromArgb(CType(CType(60, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(61, Byte), Integer))
-        Me.btn_back.Location = New System.Drawing.Point(16, 23)
-        Me.btn_back.Name = "btn_back"
-        Me.btn_back.Size = New System.Drawing.Size(30, 30)
-        Me.btn_back.TabIndex = 14
-        Me.btn_back.UseVisualStyleBackColor = True
-        '
-        'btn_generate
-        '
-        Me.btn_generate.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom
-        Me.btn_generate.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.btn_generate.Font = New System.Drawing.Font("Acumin Pro", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
-        Me.btn_generate.ForeColor = System.Drawing.Color.FromArgb(CType(CType(218, Byte), Integer), CType(CType(222, Byte), Integer), CType(CType(212, Byte), Integer))
-        Me.btn_generate.Location = New System.Drawing.Point(130, 399)
-        Me.btn_generate.Name = "btn_generate"
-        Me.btn_generate.Size = New System.Drawing.Size(100, 35)
-        Me.btn_generate.TabIndex = 13
-        Me.btn_generate.Text = "Generar"
-        Me.btn_generate.UseVisualStyleBackColor = True
-        '
-        'pb_reports
-        '
-        Me.pb_reports.Image = Global.Project_201314707.My.Resources.Resources.reports
-        Me.pb_reports.Location = New System.Drawing.Point(140, 26)
-        Me.pb_reports.Name = "pb_reports"
-        Me.pb_reports.Size = New System.Drawing.Size(80, 80)
-        Me.pb_reports.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
-        Me.pb_reports.TabIndex = 3
-        Me.pb_reports.TabStop = False
         '
         'grpbx_reports
         '
@@ -193,6 +147,52 @@ Partial Class Reports
         Me.rbtn_sngartist.Text = "Canciones por Artista"
         Me.rbtn_sngartist.UseVisualStyleBackColor = True
         '
+        'Label1
+        '
+        Me.Label1.AutoSize = True
+        Me.Label1.Font = New System.Drawing.Font("Acumin Pro", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point)
+        Me.Label1.ForeColor = System.Drawing.Color.FromArgb(CType(CType(218, Byte), Integer), CType(CType(222, Byte), Integer), CType(CType(212, Byte), Integer))
+        Me.Label1.Location = New System.Drawing.Point(2, 3)
+        Me.Label1.Name = "Label1"
+        Me.Label1.Size = New System.Drawing.Size(59, 16)
+        Me.Label1.TabIndex = 15
+        Me.Label1.Text = "Regresar"
+        '
+        'btn_back
+        '
+        Me.btn_back.BackgroundImage = Global.Project_201314707.My.Resources.Resources.back
+        Me.btn_back.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom
+        Me.btn_back.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btn_back.ForeColor = System.Drawing.Color.FromArgb(CType(CType(60, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(61, Byte), Integer))
+        Me.btn_back.Location = New System.Drawing.Point(16, 23)
+        Me.btn_back.Name = "btn_back"
+        Me.btn_back.Size = New System.Drawing.Size(30, 30)
+        Me.btn_back.TabIndex = 14
+        Me.btn_back.UseVisualStyleBackColor = True
+        '
+        'btn_generate
+        '
+        Me.btn_generate.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom
+        Me.btn_generate.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btn_generate.Font = New System.Drawing.Font("Acumin Pro", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
+        Me.btn_generate.ForeColor = System.Drawing.Color.FromArgb(CType(CType(218, Byte), Integer), CType(CType(222, Byte), Integer), CType(CType(212, Byte), Integer))
+        Me.btn_generate.Location = New System.Drawing.Point(130, 399)
+        Me.btn_generate.Name = "btn_generate"
+        Me.btn_generate.Size = New System.Drawing.Size(100, 35)
+        Me.btn_generate.TabIndex = 13
+        Me.btn_generate.Text = "Generar"
+        Me.btn_generate.UseVisualStyleBackColor = True
+        '
+        'pb_reports
+        '
+        Me.pb_reports.Image = Global.Project_201314707.My.Resources.Resources.reports_g
+        Me.pb_reports.Location = New System.Drawing.Point(140, 26)
+        Me.pb_reports.Name = "pb_reports"
+        Me.pb_reports.Size = New System.Drawing.Size(80, 80)
+        Me.pb_reports.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
+        Me.pb_reports.TabIndex = 3
+        Me.pb_reports.TabStop = False
+        '
         'Reports
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(7.0!, 15.0!)
@@ -208,9 +208,9 @@ Partial Class Reports
         Me.Text = "Reports"
         Me.pnl_login.ResumeLayout(False)
         Me.pnl_login.PerformLayout()
-        CType(Me.pb_reports, System.ComponentModel.ISupportInitialize).EndInit()
         Me.grpbx_reports.ResumeLayout(False)
         Me.grpbx_reports.PerformLayout()
+        CType(Me.pb_reports, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
     End Sub

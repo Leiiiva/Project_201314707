@@ -159,7 +159,7 @@ Partial Class M_artists
         '
         'pb_artist
         '
-        Me.pb_artist.Image = Global.Project_201314707.My.Resources.Resources.artist
+        Me.pb_artist.Image = Global.Project_201314707.My.Resources.Resources.artist_g
         Me.pb_artist.Location = New System.Drawing.Point(141, 26)
         Me.pb_artist.Name = "pb_artist"
         Me.pb_artist.Size = New System.Drawing.Size(80, 80)

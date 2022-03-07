@@ -178,7 +178,7 @@ Partial Class M_songs
         '
         'pb_song
         '
-        Me.pb_song.Image = Global.Project_201314707.My.Resources.Resources.song
+        Me.pb_song.Image = Global.Project_201314707.My.Resources.Resources.songs1
         Me.pb_song.Location = New System.Drawing.Point(141, 26)
         Me.pb_song.Name = "pb_song"
         Me.pb_song.Size = New System.Drawing.Size(80, 80)

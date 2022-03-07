@@ -53,7 +53,7 @@ Partial Class M_users
         Me.lstbx_users.ForeColor = System.Drawing.Color.FromArgb(CType(CType(218, Byte), Integer), CType(CType(222, Byte), Integer), CType(CType(212, Byte), Integer))
         Me.lstbx_users.FormattingEnabled = True
         Me.lstbx_users.ItemHeight = 17
-        Me.lstbx_users.Location = New System.Drawing.Point(81, 163)
+        Me.lstbx_users.Location = New System.Drawing.Point(80, 163)
         Me.lstbx_users.Name = "lstbx_users"
         Me.lstbx_users.Size = New System.Drawing.Size(200, 189)
         Me.lstbx_users.TabIndex = 16
@@ -87,7 +87,7 @@ Partial Class M_users
         Me.btn_delete.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.btn_delete.Font = New System.Drawing.Font("Acumin Pro", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
         Me.btn_delete.ForeColor = System.Drawing.Color.FromArgb(CType(CType(218, Byte), Integer), CType(CType(222, Byte), Integer), CType(CType(212, Byte), Integer))
-        Me.btn_delete.Location = New System.Drawing.Point(131, 385)
+        Me.btn_delete.Location = New System.Drawing.Point(130, 385)
         Me.btn_delete.Name = "btn_delete"
         Me.btn_delete.Size = New System.Drawing.Size(100, 35)
         Me.btn_delete.TabIndex = 13
@@ -96,10 +96,10 @@ Partial Class M_users
         '
         'pb_deleteuser
         '
-        Me.pb_deleteuser.Image = Global.Project_201314707.My.Resources.Resources.delete_user
-        Me.pb_deleteuser.Location = New System.Drawing.Point(131, 26)
+        Me.pb_deleteuser.Image = Global.Project_201314707.My.Resources.Resources.delete_user_g
+        Me.pb_deleteuser.Location = New System.Drawing.Point(140, 26)
         Me.pb_deleteuser.Name = "pb_deleteuser"
-        Me.pb_deleteuser.Size = New System.Drawing.Size(100, 100)
+        Me.pb_deleteuser.Size = New System.Drawing.Size(80, 80)
         Me.pb_deleteuser.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
         Me.pb_deleteuser.TabIndex = 3
         Me.pb_deleteuser.TabStop = False

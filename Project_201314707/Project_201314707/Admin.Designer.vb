@@ -139,7 +139,7 @@ Partial Class Admin
         '
         'pb_admin
         '
-        Me.pb_admin.Image = Global.Project_201314707.My.Resources.Resources.admin
+        Me.pb_admin.Image = Global.Project_201314707.My.Resources.Resources.admin_g
         Me.pb_admin.Location = New System.Drawing.Point(140, 23)
         Me.pb_admin.Name = "pb_admin"
         Me.pb_admin.Size = New System.Drawing.Size(80, 80)

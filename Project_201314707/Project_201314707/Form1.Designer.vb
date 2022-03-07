@@ -42,6 +42,7 @@ Partial Class Form1
         Me.btn_play = New System.Windows.Forms.Button()
         Me.btn_prev = New System.Windows.Forms.Button()
         Me.pnl_start = New System.Windows.Forms.Panel()
+        Me.btn_admin = New System.Windows.Forms.Button()
         Me.pb_status1 = New System.Windows.Forms.PictureBox()
         Me.btn_register = New System.Windows.Forms.Button()
         Me.btn_login = New System.Windows.Forms.Button()
@@ -50,7 +51,6 @@ Partial Class Form1
         Me.pb_start = New System.Windows.Forms.PictureBox()
         Me.lbl_servidor = New System.Windows.Forms.Label()
         Me.btn_server = New System.Windows.Forms.Button()
-        Me.btn_admin = New System.Windows.Forms.Button()
         Me.pnl_top.SuspendLayout()
         CType(Me.pb_status2, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.pnl_left.SuspendLayout()
@@ -103,9 +103,9 @@ Partial Class Form1
         '
         Me.pb_status2.BackgroundImage = Global.Project_201314707.My.Resources.Resources.conected
         Me.pb_status2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom
-        Me.pb_status2.Location = New System.Drawing.Point(704, 0)
+        Me.pb_status2.Location = New System.Drawing.Point(710, 3)
         Me.pb_status2.Name = "pb_status2"
-        Me.pb_status2.Size = New System.Drawing.Size(30, 30)
+        Me.pb_status2.Size = New System.Drawing.Size(25, 25)
         Me.pb_status2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
         Me.pb_status2.TabIndex = 12
         Me.pb_status2.TabStop = False
@@ -116,7 +116,7 @@ Partial Class Form1
         Me.lbl_server.AutoSize = True
         Me.lbl_server.Font = New System.Drawing.Font("Acumin Pro", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point)
         Me.lbl_server.ForeColor = System.Drawing.Color.FromArgb(CType(CType(218, Byte), Integer), CType(CType(222, Byte), Integer), CType(CType(212, Byte), Integer))
-        Me.lbl_server.Location = New System.Drawing.Point(625, 5)
+        Me.lbl_server.Location = New System.Drawing.Point(631, 5)
         Me.lbl_server.Name = "lbl_server"
         Me.lbl_server.Size = New System.Drawing.Size(73, 20)
         Me.lbl_server.TabIndex = 3
@@ -299,13 +299,25 @@ Partial Class Form1
         Me.pnl_start.Size = New System.Drawing.Size(670, 410)
         Me.pnl_start.TabIndex = 5
         '
+        'btn_admin
+        '
+        Me.btn_admin.BackgroundImage = Global.Project_201314707.My.Resources.Resources.admin_g
+        Me.btn_admin.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom
+        Me.btn_admin.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btn_admin.ForeColor = System.Drawing.Color.FromArgb(CType(CType(60, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(61, Byte), Integer))
+        Me.btn_admin.Location = New System.Drawing.Point(637, 3)
+        Me.btn_admin.Name = "btn_admin"
+        Me.btn_admin.Size = New System.Drawing.Size(30, 30)
+        Me.btn_admin.TabIndex = 12
+        Me.btn_admin.UseVisualStyleBackColor = True
+        '
         'pb_status1
         '
         Me.pb_status1.BackgroundImage = Global.Project_201314707.My.Resources.Resources.unplugged
         Me.pb_status1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom
-        Me.pb_status1.Location = New System.Drawing.Point(178, 21)
+        Me.pb_status1.Location = New System.Drawing.Point(137, 15)
         Me.pb_status1.Name = "pb_status1"
-        Me.pb_status1.Size = New System.Drawing.Size(30, 30)
+        Me.pb_status1.Size = New System.Drawing.Size(25, 25)
         Me.pb_status1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
         Me.pb_status1.TabIndex = 11
         Me.pb_status1.TabStop = False
@@ -368,37 +380,25 @@ Partial Class Form1
         'lbl_servidor
         '
         Me.lbl_servidor.AutoSize = True
-        Me.lbl_servidor.Font = New System.Drawing.Font("Acumin Pro", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point)
+        Me.lbl_servidor.Font = New System.Drawing.Font("Acumin Pro", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point)
         Me.lbl_servidor.ForeColor = System.Drawing.Color.FromArgb(CType(CType(218, Byte), Integer), CType(CType(222, Byte), Integer), CType(CType(212, Byte), Integer))
-        Me.lbl_servidor.Location = New System.Drawing.Point(81, 22)
+        Me.lbl_servidor.Location = New System.Drawing.Point(58, 17)
         Me.lbl_servidor.Name = "lbl_servidor"
-        Me.lbl_servidor.Size = New System.Drawing.Size(93, 25)
+        Me.lbl_servidor.Size = New System.Drawing.Size(73, 20)
         Me.lbl_servidor.TabIndex = 2
         Me.lbl_servidor.Text = "Servidor:"
         '
         'btn_server
         '
-        Me.btn_server.BackgroundImage = Global.Project_201314707.My.Resources.Resources.server
+        Me.btn_server.BackgroundImage = Global.Project_201314707.My.Resources.Resources.server_g
         Me.btn_server.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom
         Me.btn_server.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.btn_server.ForeColor = System.Drawing.Color.FromArgb(CType(CType(60, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(61, Byte), Integer))
-        Me.btn_server.Location = New System.Drawing.Point(1, 1)
+        Me.btn_server.Location = New System.Drawing.Point(2, 2)
         Me.btn_server.Name = "btn_server"
-        Me.btn_server.Size = New System.Drawing.Size(75, 75)
+        Me.btn_server.Size = New System.Drawing.Size(50, 50)
         Me.btn_server.TabIndex = 1
         Me.btn_server.UseVisualStyleBackColor = True
-        '
-        'btn_admin
-        '
-        Me.btn_admin.BackgroundImage = Global.Project_201314707.My.Resources.Resources.admin
-        Me.btn_admin.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom
-        Me.btn_admin.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.btn_admin.ForeColor = System.Drawing.Color.FromArgb(CType(CType(60, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(61, Byte), Integer))
-        Me.btn_admin.Location = New System.Drawing.Point(637, 3)
-        Me.btn_admin.Name = "btn_admin"
-        Me.btn_admin.Size = New System.Drawing.Size(30, 30)
-        Me.btn_admin.TabIndex = 12
-        Me.btn_admin.UseVisualStyleBackColor = True
         '
         'Form1
         '
