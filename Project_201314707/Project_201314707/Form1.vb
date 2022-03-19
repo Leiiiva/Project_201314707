@@ -15,6 +15,8 @@ Public Class Form1
         Try
             myConn.Open()
             pb_status1.Image = Image.FromFile("D:\Documents\GitHub\Project_201314707\Project_201314707\resources\interfaz\conected.png")
+            btn_login.Enabled = True
+            btn_register.Enabled = True
             myConn.Close()
         Catch ex As Exception
             MsgBox("Error al conectar")
@@ -22,8 +24,7 @@ Public Class Form1
     End Sub
 
     Private Sub btn_login_Click(sender As Object, e As EventArgs) Handles btn_login.Click
-        Me.Visible = False
-        Login.Visible = True
+        PM.ValidUsername(txt_usrname.Text)
     End Sub
 
     Private Sub btn_register_Click(sender As Object, e As EventArgs) Handles btn_register.Click
@@ -32,11 +33,7 @@ Public Class Form1
     End Sub
 
     Private Sub btn_logout_Click(sender As Object, e As EventArgs) Handles btn_logout.Click
-        pnl_left.Visible = False
-        pnl_bottom.Visible = False
-        lbl_server.Visible = False
-        pb_status2.Visible = False
-        pnl_start.Visible = True
+        PM.Logout()
     End Sub
 
     Private Sub btn_admin_Click(sender As Object, e As EventArgs) Handles btn_admin.Click

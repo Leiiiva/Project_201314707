@@ -9,7 +9,7 @@
         Dim myPassword As String = txt_password.Text
         Dim cPassword As String = txt_cpassword.Text
         If myPassword = cPassword Then
-            If PM.ValidPassword(myPassword) Then
+            If PM.ValidRegisterP(myPassword) Then
                 Me.Close()
                 Form1.pnl_start.Visible = False
                 Form1.pnl_left.Visible = True
@@ -23,6 +23,5 @@
         Else
             MsgBox("Password {0} is invalid")
         End If
-
     End Sub
 End Class

@@ -47,7 +47,7 @@ Partial Class Form1
         Me.btn_register = New System.Windows.Forms.Button()
         Me.btn_login = New System.Windows.Forms.Button()
         Me.lbl_user = New System.Windows.Forms.Label()
-        Me.TextBox1 = New System.Windows.Forms.TextBox()
+        Me.txt_usrname = New System.Windows.Forms.TextBox()
         Me.pb_start = New System.Windows.Forms.PictureBox()
         Me.lbl_servidor = New System.Windows.Forms.Label()
         Me.btn_server = New System.Windows.Forms.Button()
@@ -290,7 +290,7 @@ Partial Class Form1
         Me.pnl_start.Controls.Add(Me.btn_register)
         Me.pnl_start.Controls.Add(Me.btn_login)
         Me.pnl_start.Controls.Add(Me.lbl_user)
-        Me.pnl_start.Controls.Add(Me.TextBox1)
+        Me.pnl_start.Controls.Add(Me.txt_usrname)
         Me.pnl_start.Controls.Add(Me.pb_start)
         Me.pnl_start.Controls.Add(Me.lbl_servidor)
         Me.pnl_start.Controls.Add(Me.btn_server)
@@ -325,6 +325,7 @@ Partial Class Form1
         'btn_register
         '
         Me.btn_register.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom
+        Me.btn_register.Enabled = False
         Me.btn_register.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.btn_register.Font = New System.Drawing.Font("Acumin Pro", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
         Me.btn_register.ForeColor = System.Drawing.Color.FromArgb(CType(CType(218, Byte), Integer), CType(CType(222, Byte), Integer), CType(CType(212, Byte), Integer))
@@ -338,6 +339,7 @@ Partial Class Form1
         'btn_login
         '
         Me.btn_login.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom
+        Me.btn_login.Enabled = False
         Me.btn_login.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.btn_login.Font = New System.Drawing.Font("Acumin Pro", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
         Me.btn_login.ForeColor = System.Drawing.Color.FromArgb(CType(CType(218, Byte), Integer), CType(CType(222, Byte), Integer), CType(CType(212, Byte), Integer))
@@ -359,13 +361,13 @@ Partial Class Form1
         Me.lbl_user.TabIndex = 5
         Me.lbl_user.Text = "Usuario:"
         '
-        'TextBox1
+        'txt_usrname
         '
-        Me.TextBox1.Font = New System.Drawing.Font("Acumin Pro", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
-        Me.TextBox1.Location = New System.Drawing.Point(270, 238)
-        Me.TextBox1.Name = "TextBox1"
-        Me.TextBox1.Size = New System.Drawing.Size(150, 27)
-        Me.TextBox1.TabIndex = 4
+        Me.txt_usrname.Font = New System.Drawing.Font("Acumin Pro", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
+        Me.txt_usrname.Location = New System.Drawing.Point(270, 238)
+        Me.txt_usrname.Name = "txt_usrname"
+        Me.txt_usrname.Size = New System.Drawing.Size(150, 27)
+        Me.txt_usrname.TabIndex = 4
         '
         'pb_start
         '
@@ -440,7 +442,7 @@ Partial Class Form1
     Friend WithEvents lbl_servidor As Label
     Friend WithEvents btn_server As Button
     Friend WithEvents lbl_user As Label
-    Friend WithEvents TextBox1 As TextBox
+    Friend WithEvents txt_usrname As TextBox
     Friend WithEvents pb_start As PictureBox
     Friend WithEvents btn_login As Button
     Friend WithEvents btn_register As Button
