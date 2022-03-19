@@ -6,22 +6,20 @@
     End Sub
 
     Private Sub btn_register_Click(sender As Object, e As EventArgs) Handles btn_register.Click
-        Dim myPassword As String = txt_password.Text
-        Dim cPassword As String = txt_cpassword.Text
-        If myPassword = cPassword Then
-            If PM.ValidRegisterP(myPassword) Then
-                Me.Close()
-                Form1.pnl_start.Visible = False
-                Form1.pnl_left.Visible = True
-                Form1.pnl_bottom.Visible = True
-                Form1.lbl_server.Visible = True
-                Form1.pb_status2.Visible = True
-                Form1.Visible = True
-            Else
-                MsgBox("Passwords {0} do not match")
-            End If
+        If (Not (txt_fullname.Text = "") And Not (txt_username.Text = "") And Not (txt_password.Text = "") And Not (txt_cpassword.Text = "") And Not (picturepath = "")) Then
+            PM.RegisterNU(txt_fullname.Text, txt_username.Text, txt_password.Text, txt_cpassword.Text, picturepath)
         Else
-            MsgBox("Password {0} is invalid")
+            MsgBox("Ingrese todos lo campos")
+        End If
+    End Sub
+
+    Private Sub btn_openimage_Click(sender As Object, e As EventArgs) Handles btn_openimage.Click
+        ofd_register.ShowDialog()
+        picturepath = ofd_register.FileName()
+        If Not (picturepath = "") Then
+            lbl_path.Text = picturepath
+        Else
+            MsgBox("Seleccione una imagen por favor")
         End If
     End Sub
 End Class
