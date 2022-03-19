@@ -22,6 +22,7 @@
 
     Private Sub btn_logout_Click(sender As Object, e As EventArgs) Handles btn_logout.Click
         Me.Close()
+        PM.Logout()
         Form1.Visible = True
         Form1.pnl_left.Visible = False
         Form1.pnl_bottom.Visible = False

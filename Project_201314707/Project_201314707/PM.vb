@@ -32,18 +32,19 @@ Module PM
                 user_id = myReader.GetInt32(0).ToString
                 user_name = myReader.GetString(1)
                 user_username = myReader.GetString(2)
+                user_password = myReader.GetString(3)
                 user_type = myReader.GetString(4)
                 user_picture = myReader.GetString(5)
             Loop
 
             If Not (PM.user_username = "") Then
-                MsgBox("Bienvenido " + username)
+                MsgBox("Welcome: " + username, vbInformation, "Welcome !")
                 Login.lbl_username.Text = user_username
                 Login.pb_user.Image = Image.FromFile(user_picture)
                 Form1.Visible = False
                 Login.Visible = True
             Else
-                MsgBox("Usuario no encontrado")
+                MsgBox("User not found", vbExclamation, "Warning !")
             End If
 
             myConn.Close()
@@ -55,7 +56,7 @@ Module PM
 
     Sub ValidLoginP(password As String)
         If (Cypher(password) = user_password) Then
-            MsgBox("Login exitoso")
+            MsgBox("Login successful!", vbInformation, "Login Ok !")
             Login.Close()
             If (user_type = "admin") Then
                 Admin.Visible = True
@@ -72,7 +73,7 @@ Module PM
             End If
 
         Else
-            MsgBox("Contraseña incorrecta")
+            MsgBox("Wrong Password !", vbExclamation, "Warning !")
         End If
     End Sub
 
@@ -90,51 +91,55 @@ Module PM
         Form1.lbl_server.Visible = False
         Form1.pb_status2.Visible = False
         Form1.pnl_start.Visible = True
+        MsgBox("Logout successful!", vbInformation, "Logout Ok !")
     End Sub
 
     Sub RegisterNU(name As String, username As String, myPassword As String, cpassword As String, picture As String)
         If myPassword = cpassword Then
-            If ValidRegisterP(myPassword) Then
+            If ValidRegisterP(myPassword) = True Then
                 user_password = Cypher(myPassword)
                 Try
-                    myCmd = myConn.CreateCommand
-                    Dim consulta As String = "SELECT * FROM Users WHERE username = '" & username & "'"
-                    myCmd.CommandText = consulta
-
-                    myConn.Open()
-                    myReader = myCmd.ExecuteReader()
-
-                    Do While myReader.Read()
-                        user_username = myReader.GetString(2)
-                    Loop
-
-                    If (user_username = username) Then
-                        MsgBox("El usuario ya existe")
-                    Else
-                        Dim ingreso As String = "INSERT INTO Users(name, username, password, type, picture) VALUES ('" & name & "', '" & username & "', '" & user_password & "', " & "'cliente', '" & picture & "')"
-                        MsgBox("Usuario creado correctamente")
-                        Register.Close()
-                        Form1.pnl_start.Visible = False
-                        Form1.pnl_left.Visible = True
-                        Form1.pnl_bottom.Visible = True
-                        Form1.lbl_server.Visible = True
-                        Form1.pb_status2.Visible = True
-                        Form1.pb_user.Image = Image.FromFile(picture)
-                        Form1.lbl_username.Text = username
-                        Form1.Visible = True
-                    End If
-
-                    myConn.Close()
-
+                    Dim query As String = String.Empty
+                    query &= "INSERT INTO Users(name, username, password, type, picture) VALUES (@name,@username,@password,@type,@picture)"
+                    Using myConn
+                        Using myCmd As New SqlCommand()
+                            With myCmd
+                                .Connection = myConn
+                                .CommandType = CommandType.Text
+                                .CommandText = query
+                                .Parameters.AddWithValue("@name", name)
+                                .Parameters.AddWithValue("@username", username)
+                                .Parameters.AddWithValue("@password", user_password)
+                                .Parameters.AddWithValue("@type", "cliente")
+                                .Parameters.AddWithValue("@picture", picture)
+                            End With
+                            Try
+                                myConn.Open()
+                                myCmd.ExecuteNonQuery()
+                                MsgBox("User registration completed !", vbInformation, "Completed !")
+                                Register.Close()
+                                Form1.pnl_start.Visible = False
+                                Form1.pnl_left.Visible = True
+                                Form1.pnl_bottom.Visible = True
+                                Form1.lbl_server.Visible = True
+                                Form1.pb_status2.Visible = True
+                                Form1.pb_user.Image = Image.FromFile(picture)
+                                Form1.lbl_username.Text = username
+                                Form1.Visible = True
+                                myConn.Close()
+                            Catch ex As SqlException
+                                MsgBox(ex.Message.ToString(), vbExclamation, "Error")
+                            End Try
+                        End Using
+                    End Using
                 Catch ex As Exception
-                    MsgBox("Error al ingresar datos a la base de datos")
+                    MsgBox("Error entering data", vbExclamation, "Error")
                 End Try
-
             Else
-                MsgBox("Las contraseñas no coinciden")
+                MsgBox("Invalid Password", vbExclamation, "Check Password")
             End If
         Else
-            MsgBox("Contraseña invalida")
+            MsgBox("Passwords don't match", vbExclamation, "Check Password")
         End If
     End Sub
 
@@ -143,7 +148,6 @@ Module PM
         If Not myPassword.Any(Function(c) Char.IsDigit(c)) Then Return False
         If Not myPassword.Any(Function(c) Char.IsLower(c)) Then Return False
         If Not myPassword.Any(Function(c) Char.IsUpper(c)) Then Return False
-        If Not myPassword.Any(Function(c) Char.IsSymbol(c)) Then Return False
         Return True
     End Function
 
