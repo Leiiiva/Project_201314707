@@ -1,4 +1,8 @@
-﻿Public Class Form1
+﻿Imports System.Data.SqlClient
+Imports System.Data.Sql
+Imports System.Data.SqlTypes
+Imports System.Configuration
+Public Class Form1
     Private Sub btn_close_Click(sender As Object, e As EventArgs) Handles btn_minimize.Click
         Me.WindowState = FormWindowState.Minimized
     End Sub
@@ -8,7 +12,13 @@
     End Sub
 
     Private Sub btn_server_Click(sender As Object, e As EventArgs) Handles btn_server.Click
-        pb_status1.Image = Image.FromFile("D:\Documents\GitHub\Project_201314707\Project_201314707\resources\interfaz\conected.png")
+        Try
+            myConn.Open()
+            pb_status1.Image = Image.FromFile("D:\Documents\GitHub\Project_201314707\Project_201314707\resources\interfaz\conected.png")
+            myConn.Close()
+        Catch ex As Exception
+            MsgBox("Error al conectar")
+        End Try
     End Sub
 
     Private Sub btn_login_Click(sender As Object, e As EventArgs) Handles btn_login.Click
@@ -33,4 +43,7 @@
         Me.Visible = False
         Admin.Visible = True
     End Sub
+
+
+
 End Class
