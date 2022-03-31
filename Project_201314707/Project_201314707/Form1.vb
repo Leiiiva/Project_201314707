@@ -18,6 +18,7 @@ Public Class Form1
             btn_login.Enabled = True
             btn_register.Enabled = True
             myConn.Close()
+            MsgBox("Connection successful!", vbInformation, "Server Ok !")
         Catch ex As Exception
             MsgBox("Error al conectar")
         End Try
