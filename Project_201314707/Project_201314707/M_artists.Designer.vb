@@ -146,7 +146,6 @@ Partial Class M_artists
         Me.txt_country.Name = "txt_country"
         Me.txt_country.Size = New System.Drawing.Size(281, 27)
         Me.txt_country.TabIndex = 5
-        Me.txt_country.UseSystemPasswordChar = True
         '
         'txt_artistname
         '
@@ -155,7 +154,6 @@ Partial Class M_artists
         Me.txt_artistname.Name = "txt_artistname"
         Me.txt_artistname.Size = New System.Drawing.Size(281, 27)
         Me.txt_artistname.TabIndex = 5
-        Me.txt_artistname.UseSystemPasswordChar = True
         '
         'pb_artist
         '

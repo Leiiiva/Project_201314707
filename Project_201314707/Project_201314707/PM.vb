@@ -162,4 +162,116 @@ Module PM
         Return Convert.ToBase64String(des.CreateEncryptor().TransformFinalBlock(buffer, 0, buffer.Length()))
     End Function
 
+
+    'ADMIN SECTION
+
+    'Artist Management
+
+    Sub RegisterNA(name As String, country As String)
+        Try
+            Dim query As String = String.Empty
+            query &= "INSERT INTO Artist(name, Nationality) VALUES (@name,@Nationality)"
+            Using myConn
+                Using myCmd As New SqlCommand()
+                    With myCmd
+                        .Connection = myConn
+                        .CommandType = CommandType.Text
+                        .CommandText = query
+                        .Parameters.AddWithValue("@name", name)
+                        .Parameters.AddWithValue("@Nationality", country)
+                    End With
+                    Try
+                        myConn.Open()
+                        myCmd.ExecuteNonQuery()
+                        MsgBox("Artist registration completed !", vbInformation, "Completed !")
+                        myConn.Close()
+                    Catch ex As SqlException
+                        MsgBox(ex.Message.ToString(), vbExclamation, "Error")
+                    End Try
+                End Using
+            End Using
+        Catch ex As Exception
+            MsgBox("Error entering data", vbExclamation, "Error")
+        End Try
+
+        Update_AL()
+    End Sub
+
+    Sub DeleteA(name As String)
+        Try
+            Dim query As String = String.Empty
+            Dim consulta As String = "DELETE FROM Artist WHERE name = '" & name & "'"
+            myCmd = New SqlCommand(consulta, myConn)
+            myConn.Open()
+            myCmd.ExecuteNonQuery()
+            MsgBox("Artist deleted !", vbInformation, "Completed !")
+            myConn.Close()
+        Catch ex As SqlException
+            MsgBox(ex.Message.ToString(), vbExclamation, "Error")
+        End Try
+
+        Update_AL()
+    End Sub
+
+    Sub Update_AL()
+        M_artists.lstbx_artists.Items.Clear()
+        myConn.ConnectionString = conn
+        myConn.Open()
+        Try
+            myCmd = myConn.CreateCommand
+            Dim consulta As String = "SELECT * FROM Artist"
+            myCmd.CommandText = consulta
+
+            myReader = myCmd.ExecuteReader()
+
+            Do While myReader.Read()
+                M_artists.lstbx_artists.Items.Add(myReader.GetString(1))
+            Loop
+
+        Catch ex As Exception
+            MsgBox(ex.Message.ToString(), vbExclamation, "Error")
+        End Try
+        myConn.Close()
+    End Sub
+
+    'User Management
+    Sub DeleteU(username As String)
+        Try
+            Dim query As String = String.Empty
+            Dim consulta As String = "DELETE FROM Users WHERE username = '" & username & "'"
+            myCmd = New SqlCommand(consulta, myConn)
+            myConn.Open()
+            myCmd.ExecuteNonQuery()
+            MsgBox("Username deleted !", vbInformation, "Completed !")
+            myConn.Close()
+        Catch ex As SqlException
+            MsgBox(ex.Message.ToString(), vbExclamation, "Error")
+        End Try
+
+        Update_UL()
+    End Sub
+
+    Sub Update_UL()
+        M_users.lstbx_users.Items.Clear()
+        myConn.ConnectionString = conn
+        myConn.Open()
+        Try
+            myCmd = myConn.CreateCommand
+            Dim consulta As String = "SELECT * FROM Users"
+            myCmd.CommandText = consulta
+
+            myReader = myCmd.ExecuteReader()
+
+            Do While myReader.Read()
+                M_users.lstbx_users.Items.Add(myReader.GetString(2))
+            Loop
+
+        Catch ex As Exception
+            MsgBox(ex.Message.ToString(), vbExclamation, "Error")
+        End Try
+        myConn.Close()
+    End Sub
+
+    'Song Management
+
 End Module
