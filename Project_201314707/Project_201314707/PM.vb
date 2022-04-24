@@ -10,13 +10,12 @@ Module PM
     Public myCmd As SqlCommand
     Public myReader As SqlDataReader
 
-    Public user_id As String = ""
+    Public user_id As Integer
     Public user_name As String = ""
     Public user_username As String = ""
     Public user_password As String = ""
     Public user_type As String = ""
     Public user_picture As String = ""
-
     Public picturepath As String = ""
 
     Sub ValidUsername(username As String)
@@ -29,7 +28,7 @@ Module PM
             myReader = myCmd.ExecuteReader()
 
             Do While myReader.Read()
-                user_id = myReader.GetInt32(0).ToString
+                user_id = myReader.GetInt32(0)
                 user_name = myReader.GetString(1)
                 user_username = myReader.GetString(2)
                 user_password = myReader.GetString(3)
@@ -69,6 +68,7 @@ Module PM
                 Form1.pb_status2.Visible = True
                 Form1.pb_user.Image = Image.FromFile(user_picture)
                 Form1.lbl_username.Text = user_username
+                Update_PLS()
                 Form1.Visible = True
             End If
 
@@ -125,6 +125,7 @@ Module PM
                                 Form1.pb_status2.Visible = True
                                 Form1.pb_user.Image = Image.FromFile(picture)
                                 Form1.lbl_username.Text = username
+                                Update_PLS()
                                 Form1.Visible = True
                                 myConn.Close()
                             Catch ex As SqlException
@@ -292,6 +293,56 @@ Module PM
         myConn.Close()
     End Sub
 
+    Sub UpdateU(name As String, username As String, password As String, cpassword As String, picpath As String)
+        If password = cpassword Then
+            If ValidRegisterP(password) = True Then
+                user_password = Cypher(password)
+                Try
+                    Dim query As String = String.Empty
+                    query &= "UPDATE Users(name, username, password, type, picture) VALUES (@name,@username,@password,@type,@picture) WHERE username = '" & Form1.lbl_username.Text & "'"
+                    Using myConn
+                        Using myCmd As New SqlCommand()
+                            With myCmd
+                                .Connection = myConn
+                                .CommandType = CommandType.Text
+                                .CommandText = query
+                                .Parameters.AddWithValue("@name", name)
+                                .Parameters.AddWithValue("@username", username)
+                                .Parameters.AddWithValue("@password", user_password)
+                                .Parameters.AddWithValue("@type", "cliente")
+                                .Parameters.AddWithValue("@picture", picpath)
+                            End With
+                            Try
+                                myConn.Open()
+                                myCmd.ExecuteNonQuery()
+                                MsgBox("User registration completed !", vbInformation, "Completed !")
+                                Register.Close()
+                                Form1.pnl_start.Visible = False
+                                Form1.pnl_left.Visible = True
+                                Form1.pnl_bottom.Visible = True
+                                Form1.lbl_server.Visible = True
+                                Form1.pb_status2.Visible = True
+                                Form1.pb_user.Image = Image.FromFile(picpath)
+                                Form1.lbl_username.Text = username
+                                Form1.Visible = True
+                                myConn.Close()
+                            Catch ex As SqlException
+                                MsgBox(ex.Message.ToString(), vbExclamation, "Error")
+                            End Try
+                        End Using
+                    End Using
+                Catch ex As Exception
+                    MsgBox("Error entering data", vbExclamation, "Error")
+                End Try
+            Else
+                MsgBox("Invalid Password", vbExclamation, "Check Password")
+            End If
+        Else
+            MsgBox("Passwords don't match", vbExclamation, "Check Password")
+        End If
+    End Sub
+
+
     'Song Management
 
     Sub RegisterNS(name As String, genre As String, location As String, artist As Integer)
@@ -322,7 +373,7 @@ Module PM
         Catch ex As Exception
             MsgBox("Error entering data", vbExclamation, "Error")
         End Try
-
+        Update_SL()
         Update_AL()
     End Sub
 
@@ -338,7 +389,51 @@ Module PM
             myReader = myCmd.ExecuteReader()
 
             Do While myReader.Read()
-                M_users.lstbx_users.Items.Add(myReader.GetString(1))
+                M_songs.lstbx_songs.Items.Add(myReader.GetString(1))
+            Loop
+
+        Catch ex As Exception
+            MsgBox(ex.Message.ToString(), vbExclamation, "Error")
+        End Try
+        myConn.Close()
+    End Sub
+
+    Sub Update_SL2()
+        Form1.lstbx_songs.Items.Clear()
+        myConn.ConnectionString = conn
+        myConn.Open()
+        Try
+            myCmd = myConn.CreateCommand
+            Dim consulta As String = "SELECT * FROM Song"
+            myCmd.CommandText = consulta
+
+            myReader = myCmd.ExecuteReader()
+
+            Do While myReader.Read()
+                Form1.lstbx_songs.Items.Add(myReader.GetString(1))
+            Loop
+
+        Catch ex As Exception
+            MsgBox(ex.Message.ToString(), vbExclamation, "Error")
+        End Try
+        myConn.Close()
+    End Sub
+
+    Sub Update_SL3(npl As String)
+        Form1.lstbx_sngs.Items.Clear()
+        myConn.ConnectionString = conn
+        myConn.Open()
+        Try
+            myCmd = myConn.CreateCommand
+            Dim consulta As String = "SELECT dbo.Song.name, dbo.Playlist.picture, dbo.Playlist.date_created FROM dbo.Playlist INNER JOIN dbo.PlaylistDetails ON dbo.Playlist.ID = dbo.PlaylistDetails.playlist_id INNER JOIN dbo.Song ON dbo.PlaylistDetails.song_id = dbo.Song.ID INNER JOIN dbo.Users ON dbo.Playlist.user_id = dbo.Users.ID AND dbo.Playlist.user_id = dbo.Users.ID WHERE (dbo.Users.ID = " & user_id & ") AND (dbo.Playlist.name = '" & npl & "')"
+            myCmd.CommandText = consulta
+
+            myReader = myCmd.ExecuteReader()
+
+            Do While myReader.Read()
+                Form1.lstbx_sngs.Items.Add(myReader.GetString(0))
+                Form1.pb_pl.Image = Image.FromFile(myReader.GetString(1))
+                Form1.pl_date.Text = Convert.ToDateTime(myReader.GetDateTime(2)).ToString("yyyy/MM/dd")
             Loop
 
         Catch ex As Exception
@@ -362,6 +457,7 @@ Module PM
 
         Update_SL()
     End Sub
+
     Function GetAID(artista) As Integer
         Dim ID As Integer
         myConn.ConnectionString = conn
@@ -383,4 +479,156 @@ Module PM
         myConn.Close()
         Return ID
     End Function
+
+    'Playlist Management
+
+    Sub CreatePlaylist(name As String, picpath As String)
+        Try
+            Dim query As String = String.Empty
+            query &= "INSERT INTO Playlist(name, date_created, picture, user_id) VALUES (@name, GETDATE(), @picture, @user_id)"
+            Using myConn
+                Using myCmd As New SqlCommand()
+                    With myCmd
+                        .Connection = myConn
+                        .CommandType = CommandType.Text
+                        .CommandText = query
+                        .Parameters.AddWithValue("@name", name)
+                        .Parameters.AddWithValue("@picture", picpath)
+                        .Parameters.AddWithValue("@user_id", user_id)
+                    End With
+                    Try
+                        myConn.Open()
+                        myCmd.ExecuteNonQuery()
+                        MsgBox("Playlist registration completed !", vbInformation, "Completed !")
+                        myConn.Close()
+                    Catch ex As SqlException
+                        MsgBox(ex.Message.ToString(), vbExclamation, "Error")
+                    End Try
+                End Using
+            End Using
+        Catch ex As Exception
+            MsgBox("Error entering data", vbExclamation, "Error")
+        End Try
+    End Sub
+
+    Sub CreatePlaylistDetail(playlist_id As Integer, song_id As Integer)
+        Try
+            Dim query As String = String.Empty
+            query &= "INSERT INTO PlaylistDetails(playlist_id, song_id) VALUES (@playlist_id, @song_id)"
+            Using myConn
+                Using myCmd As New SqlCommand()
+                    With myCmd
+                        .Connection = myConn
+                        .CommandType = CommandType.Text
+                        .CommandText = query
+                        .Parameters.AddWithValue("@playlist_id", playlist_id)
+                        .Parameters.AddWithValue("@song_id", song_id)
+                    End With
+                    Try
+                        myConn.Open()
+                        myCmd.ExecuteNonQuery()
+                        MsgBox("Playlist detail registration completed !", vbInformation, "Completed !")
+                        myConn.Close()
+                    Catch ex As SqlException
+                        MsgBox(ex.Message.ToString(), vbExclamation, "Error")
+                    End Try
+                End Using
+            End Using
+        Catch ex As Exception
+            MsgBox("Error entering data", vbExclamation, "Error")
+        End Try
+
+    End Sub
+
+    Function GetPID(pname As String) As Integer
+        Dim ID As Integer
+        myConn.ConnectionString = conn
+        myConn.Open()
+        Try
+            myCmd = myConn.CreateCommand
+            Dim consulta As String = "SELECT * FROM Playlist WHERE name = '" & pname & "' AND user_id =" & user_id & ""
+            myCmd.CommandText = consulta
+
+            myReader = myCmd.ExecuteReader()
+
+            Do While myReader.Read()
+                ID = myReader.GetInt32(0)
+            Loop
+
+        Catch ex As Exception
+            MsgBox(ex.Message.ToString(), vbExclamation, "Error")
+        End Try
+        myConn.Close()
+        Return ID
+    End Function
+
+    Function GetSID(sname As String) As Integer
+        Dim sID As Integer
+        myConn.ConnectionString = conn
+        Try
+            myConn.Open()
+            myCmd = myConn.CreateCommand
+            Dim consulta As String = "SELECT * FROM Song WHERE name = '" & sname & "'"
+            myCmd.CommandText = consulta
+
+            myReader = myCmd.ExecuteReader()
+
+            Do While myReader.Read()
+                sID = myReader.GetInt32(0)
+            Loop
+
+            myConn.Close()
+        Catch ex As Exception
+            MsgBox(ex.Message.ToString(), vbExclamation, "Error")
+        End Try
+        Return sID
+    End Function
+
+    Sub Update_PLS()
+        Form1.lstbx_pls.Items.Clear()
+        myConn.ConnectionString = conn
+        myConn.Open()
+        Try
+            myCmd = myConn.CreateCommand
+            Dim consulta As String = "SELECT * FROM Playlist WHERE user_id = " & user_id
+            myCmd.CommandText = consulta
+
+            myReader = myCmd.ExecuteReader()
+
+            Do While myReader.Read()
+                Form1.lstbx_pls.Items.Add(myReader.GetString(1))
+            Loop
+
+        Catch ex As Exception
+            MsgBox(ex.Message.ToString(), vbExclamation, "Error")
+        End Try
+        myConn.Close()
+    End Sub
+
+    Function GetSPath(name As String) As String
+        Dim ID As String
+        myConn.ConnectionString = conn
+        myConn.Open()
+        Try
+            myCmd = myConn.CreateCommand
+            Dim consulta As String = "SELECT location FROM Song WHERE name = '" & name & "'"
+            myCmd.CommandText = consulta
+
+            myReader = myCmd.ExecuteReader()
+
+            Do While myReader.Read()
+                ID = myReader.GetString(0)
+            Loop
+
+        Catch ex As Exception
+            MsgBox(ex.Message.ToString(), vbExclamation, "Error")
+        End Try
+        myConn.Close()
+        Return ID
+    End Function
+
+
+    'REPORTING SECTION
+
+
 End Module

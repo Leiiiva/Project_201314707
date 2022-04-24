@@ -20,4 +20,5 @@
     Private Sub M_artists_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         Update_AL()
     End Sub
+
 End Class

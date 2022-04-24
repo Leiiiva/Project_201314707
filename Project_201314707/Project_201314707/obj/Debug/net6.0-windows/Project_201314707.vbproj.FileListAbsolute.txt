@@ -30,3 +30,4 @@ D:\Documents\GitHub\Project_201314707\Project_201314707\Project_201314707\bin\De
 D:\Documents\GitHub\Project_201314707\Project_201314707\Project_201314707\bin\Debug\net6.0-windows\runtimes\unix\lib\netcoreapp2.1\System.Data.SqlClient.dll
 D:\Documents\GitHub\Project_201314707\Project_201314707\Project_201314707\bin\Debug\net6.0-windows\runtimes\win\lib\netcoreapp2.1\System.Data.SqlClient.dll
 D:\Documents\GitHub\Project_201314707\Project_201314707\Project_201314707\obj\Debug\net6.0-windows\Project_201314707.vbproj.CopyComplete
+D:\Documents\GitHub\Project_201314707\Project_201314707\Project_201314707\obj\Debug\net6.0-windows\Project_201314707.E_User.resources

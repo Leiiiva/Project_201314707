@@ -46,17 +46,17 @@ Partial Class Admin
         Me.pnl_login.Controls.Add(Me.btn_martists)
         Me.pnl_login.Controls.Add(Me.btn_reports)
         Me.pnl_login.Controls.Add(Me.pb_admin)
-        Me.pnl_login.Location = New System.Drawing.Point(12, 12)
+        Me.pnl_login.Location = New System.Drawing.Point(10, 10)
         Me.pnl_login.Name = "pnl_login"
-        Me.pnl_login.Size = New System.Drawing.Size(361, 457)
+        Me.pnl_login.Size = New System.Drawing.Size(309, 396)
         Me.pnl_login.TabIndex = 6
         '
         'lbl_admin
         '
         Me.lbl_admin.AutoSize = True
-        Me.lbl_admin.Font = New System.Drawing.Font("Acumin Pro", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point)
+        Me.lbl_admin.Font = New System.Drawing.Font("Acumin Pro", 11.25!, System.Drawing.FontStyle.Bold)
         Me.lbl_admin.ForeColor = System.Drawing.Color.FromArgb(CType(CType(218, Byte), Integer), CType(CType(222, Byte), Integer), CType(CType(212, Byte), Integer))
-        Me.lbl_admin.Location = New System.Drawing.Point(153, 111)
+        Me.lbl_admin.Location = New System.Drawing.Point(127, 96)
         Me.lbl_admin.Name = "lbl_admin"
         Me.lbl_admin.Size = New System.Drawing.Size(54, 20)
         Me.lbl_admin.TabIndex = 16
@@ -65,7 +65,7 @@ Partial Class Admin
         'lbl_logout
         '
         Me.lbl_logout.AutoSize = True
-        Me.lbl_logout.Font = New System.Drawing.Font("Acumin Pro", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point)
+        Me.lbl_logout.Font = New System.Drawing.Font("Acumin Pro", 9.0!, System.Drawing.FontStyle.Bold)
         Me.lbl_logout.ForeColor = System.Drawing.Color.FromArgb(CType(CType(218, Byte), Integer), CType(CType(222, Byte), Integer), CType(CType(212, Byte), Integer))
         Me.lbl_logout.Location = New System.Drawing.Point(2, 3)
         Me.lbl_logout.Name = "lbl_logout"
@@ -79,9 +79,9 @@ Partial Class Admin
         Me.btn_logout.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom
         Me.btn_logout.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.btn_logout.ForeColor = System.Drawing.Color.FromArgb(CType(CType(60, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(61, Byte), Integer))
-        Me.btn_logout.Location = New System.Drawing.Point(10, 23)
+        Me.btn_logout.Location = New System.Drawing.Point(9, 20)
         Me.btn_logout.Name = "btn_logout"
-        Me.btn_logout.Size = New System.Drawing.Size(30, 30)
+        Me.btn_logout.Size = New System.Drawing.Size(26, 26)
         Me.btn_logout.TabIndex = 14
         Me.btn_logout.UseVisualStyleBackColor = True
         '
@@ -89,11 +89,11 @@ Partial Class Admin
         '
         Me.btn_musers.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom
         Me.btn_musers.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.btn_musers.Font = New System.Drawing.Font("Acumin Pro", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
+        Me.btn_musers.Font = New System.Drawing.Font("Acumin Pro", 12.0!)
         Me.btn_musers.ForeColor = System.Drawing.Color.FromArgb(CType(CType(218, Byte), Integer), CType(CType(222, Byte), Integer), CType(CType(212, Byte), Integer))
-        Me.btn_musers.Location = New System.Drawing.Point(130, 162)
+        Me.btn_musers.Location = New System.Drawing.Point(107, 140)
         Me.btn_musers.Name = "btn_musers"
-        Me.btn_musers.Size = New System.Drawing.Size(100, 35)
+        Me.btn_musers.Size = New System.Drawing.Size(95, 30)
         Me.btn_musers.TabIndex = 13
         Me.btn_musers.Text = "Usuarios"
         Me.btn_musers.UseVisualStyleBackColor = True
@@ -102,11 +102,11 @@ Partial Class Admin
         '
         Me.btn_msongs.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom
         Me.btn_msongs.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.btn_msongs.Font = New System.Drawing.Font("Acumin Pro", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
+        Me.btn_msongs.Font = New System.Drawing.Font("Acumin Pro", 12.0!)
         Me.btn_msongs.ForeColor = System.Drawing.Color.FromArgb(CType(CType(218, Byte), Integer), CType(CType(222, Byte), Integer), CType(CType(212, Byte), Integer))
-        Me.btn_msongs.Location = New System.Drawing.Point(130, 231)
+        Me.btn_msongs.Location = New System.Drawing.Point(107, 204)
         Me.btn_msongs.Name = "btn_msongs"
-        Me.btn_msongs.Size = New System.Drawing.Size(100, 35)
+        Me.btn_msongs.Size = New System.Drawing.Size(95, 30)
         Me.btn_msongs.TabIndex = 13
         Me.btn_msongs.Text = "Canciones"
         Me.btn_msongs.UseVisualStyleBackColor = True
@@ -115,11 +115,11 @@ Partial Class Admin
         '
         Me.btn_martists.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom
         Me.btn_martists.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.btn_martists.Font = New System.Drawing.Font("Acumin Pro", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
+        Me.btn_martists.Font = New System.Drawing.Font("Acumin Pro", 12.0!)
         Me.btn_martists.ForeColor = System.Drawing.Color.FromArgb(CType(CType(218, Byte), Integer), CType(CType(222, Byte), Integer), CType(CType(212, Byte), Integer))
-        Me.btn_martists.Location = New System.Drawing.Point(130, 300)
+        Me.btn_martists.Location = New System.Drawing.Point(107, 268)
         Me.btn_martists.Name = "btn_martists"
-        Me.btn_martists.Size = New System.Drawing.Size(100, 35)
+        Me.btn_martists.Size = New System.Drawing.Size(95, 30)
         Me.btn_martists.TabIndex = 13
         Me.btn_martists.Text = "Artistas"
         Me.btn_martists.UseVisualStyleBackColor = True
@@ -128,11 +128,11 @@ Partial Class Admin
         '
         Me.btn_reports.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom
         Me.btn_reports.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.btn_reports.Font = New System.Drawing.Font("Acumin Pro", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
+        Me.btn_reports.Font = New System.Drawing.Font("Acumin Pro", 12.0!)
         Me.btn_reports.ForeColor = System.Drawing.Color.FromArgb(CType(CType(218, Byte), Integer), CType(CType(222, Byte), Integer), CType(CType(212, Byte), Integer))
-        Me.btn_reports.Location = New System.Drawing.Point(130, 369)
+        Me.btn_reports.Location = New System.Drawing.Point(107, 332)
         Me.btn_reports.Name = "btn_reports"
-        Me.btn_reports.Size = New System.Drawing.Size(100, 35)
+        Me.btn_reports.Size = New System.Drawing.Size(95, 30)
         Me.btn_reports.TabIndex = 13
         Me.btn_reports.Text = "Reportes"
         Me.btn_reports.UseVisualStyleBackColor = True
@@ -140,20 +140,20 @@ Partial Class Admin
         'pb_admin
         '
         Me.pb_admin.Image = Global.Project_201314707.My.Resources.Resources.admin_g
-        Me.pb_admin.Location = New System.Drawing.Point(140, 23)
+        Me.pb_admin.Location = New System.Drawing.Point(120, 20)
         Me.pb_admin.Name = "pb_admin"
-        Me.pb_admin.Size = New System.Drawing.Size(80, 80)
+        Me.pb_admin.Size = New System.Drawing.Size(69, 69)
         Me.pb_admin.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
         Me.pb_admin.TabIndex = 3
         Me.pb_admin.TabStop = False
         '
         'Admin
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(7.0!, 15.0!)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.FromArgb(CType(CType(60, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(61, Byte), Integer))
         Me.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom
-        Me.ClientSize = New System.Drawing.Size(385, 480)
+        Me.ClientSize = New System.Drawing.Size(330, 416)
         Me.Controls.Add(Me.pnl_login)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)

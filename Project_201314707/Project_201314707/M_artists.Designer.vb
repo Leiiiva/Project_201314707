@@ -50,28 +50,28 @@ Partial Class M_artists
         Me.pnl_login.Controls.Add(Me.txt_country)
         Me.pnl_login.Controls.Add(Me.txt_artistname)
         Me.pnl_login.Controls.Add(Me.pb_artist)
-        Me.pnl_login.Location = New System.Drawing.Point(12, 12)
+        Me.pnl_login.Location = New System.Drawing.Point(10, 10)
         Me.pnl_login.Name = "pnl_login"
-        Me.pnl_login.Size = New System.Drawing.Size(361, 457)
+        Me.pnl_login.Size = New System.Drawing.Size(309, 455)
         Me.pnl_login.TabIndex = 6
         '
         'lstbx_artists
         '
         Me.lstbx_artists.BackColor = System.Drawing.Color.FromArgb(CType(CType(60, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(61, Byte), Integer))
         Me.lstbx_artists.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.lstbx_artists.Font = New System.Drawing.Font("Acumin Pro", 9.749999!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
+        Me.lstbx_artists.Font = New System.Drawing.Font("Acumin Pro", 9.749999!)
         Me.lstbx_artists.ForeColor = System.Drawing.Color.FromArgb(CType(CType(218, Byte), Integer), CType(CType(222, Byte), Integer), CType(CType(212, Byte), Integer))
         Me.lstbx_artists.FormattingEnabled = True
         Me.lstbx_artists.ItemHeight = 17
-        Me.lstbx_artists.Location = New System.Drawing.Point(81, 311)
+        Me.lstbx_artists.Location = New System.Drawing.Point(69, 274)
         Me.lstbx_artists.Name = "lstbx_artists"
-        Me.lstbx_artists.Size = New System.Drawing.Size(200, 70)
+        Me.lstbx_artists.Size = New System.Drawing.Size(172, 87)
         Me.lstbx_artists.TabIndex = 18
         '
         'Label1
         '
         Me.Label1.AutoSize = True
-        Me.Label1.Font = New System.Drawing.Font("Acumin Pro", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point)
+        Me.Label1.Font = New System.Drawing.Font("Acumin Pro", 9.0!, System.Drawing.FontStyle.Bold)
         Me.Label1.ForeColor = System.Drawing.Color.FromArgb(CType(CType(218, Byte), Integer), CType(CType(222, Byte), Integer), CType(CType(212, Byte), Integer))
         Me.Label1.Location = New System.Drawing.Point(2, 3)
         Me.Label1.Name = "Label1"
@@ -85,9 +85,9 @@ Partial Class M_artists
         Me.btn_back.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom
         Me.btn_back.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.btn_back.ForeColor = System.Drawing.Color.FromArgb(CType(CType(60, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(61, Byte), Integer))
-        Me.btn_back.Location = New System.Drawing.Point(16, 23)
+        Me.btn_back.Location = New System.Drawing.Point(14, 20)
         Me.btn_back.Name = "btn_back"
-        Me.btn_back.Size = New System.Drawing.Size(30, 30)
+        Me.btn_back.Size = New System.Drawing.Size(26, 26)
         Me.btn_back.TabIndex = 14
         Me.btn_back.UseVisualStyleBackColor = True
         '
@@ -95,11 +95,11 @@ Partial Class M_artists
         '
         Me.btn_addartist.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom
         Me.btn_addartist.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.btn_addartist.Font = New System.Drawing.Font("Acumin Pro", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
+        Me.btn_addartist.Font = New System.Drawing.Font("Acumin Pro", 12.0!)
         Me.btn_addartist.ForeColor = System.Drawing.Color.FromArgb(CType(CType(218, Byte), Integer), CType(CType(222, Byte), Integer), CType(CType(212, Byte), Integer))
-        Me.btn_addartist.Location = New System.Drawing.Point(131, 262)
+        Me.btn_addartist.Location = New System.Drawing.Point(112, 227)
         Me.btn_addartist.Name = "btn_addartist"
-        Me.btn_addartist.Size = New System.Drawing.Size(100, 35)
+        Me.btn_addartist.Size = New System.Drawing.Size(86, 30)
         Me.btn_addartist.TabIndex = 13
         Me.btn_addartist.Text = "Agregar"
         Me.btn_addartist.UseVisualStyleBackColor = True
@@ -108,11 +108,11 @@ Partial Class M_artists
         '
         Me.btn_deleteartist.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom
         Me.btn_deleteartist.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.btn_deleteartist.Font = New System.Drawing.Font("Acumin Pro", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
+        Me.btn_deleteartist.Font = New System.Drawing.Font("Acumin Pro", 12.0!)
         Me.btn_deleteartist.ForeColor = System.Drawing.Color.FromArgb(CType(CType(218, Byte), Integer), CType(CType(222, Byte), Integer), CType(CType(212, Byte), Integer))
-        Me.btn_deleteartist.Location = New System.Drawing.Point(131, 395)
+        Me.btn_deleteartist.Location = New System.Drawing.Point(112, 381)
         Me.btn_deleteartist.Name = "btn_deleteartist"
-        Me.btn_deleteartist.Size = New System.Drawing.Size(100, 35)
+        Me.btn_deleteartist.Size = New System.Drawing.Size(86, 30)
         Me.btn_deleteartist.TabIndex = 13
         Me.btn_deleteartist.Text = "Eliminar"
         Me.btn_deleteartist.UseVisualStyleBackColor = True
@@ -120,9 +120,9 @@ Partial Class M_artists
         'lbl_country
         '
         Me.lbl_country.AutoSize = True
-        Me.lbl_country.Font = New System.Drawing.Font("Acumin Pro", 9.749999!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point)
+        Me.lbl_country.Font = New System.Drawing.Font("Acumin Pro", 9.749999!, System.Drawing.FontStyle.Bold)
         Me.lbl_country.ForeColor = System.Drawing.Color.FromArgb(CType(CType(218, Byte), Integer), CType(CType(222, Byte), Integer), CType(CType(212, Byte), Integer))
-        Me.lbl_country.Location = New System.Drawing.Point(44, 190)
+        Me.lbl_country.Location = New System.Drawing.Point(38, 165)
         Me.lbl_country.Name = "lbl_country"
         Me.lbl_country.Size = New System.Drawing.Size(94, 17)
         Me.lbl_country.TabIndex = 6
@@ -131,9 +131,9 @@ Partial Class M_artists
         'lbl_artistname
         '
         Me.lbl_artistname.AutoSize = True
-        Me.lbl_artistname.Font = New System.Drawing.Font("Acumin Pro", 9.749999!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point)
+        Me.lbl_artistname.Font = New System.Drawing.Font("Acumin Pro", 9.749999!, System.Drawing.FontStyle.Bold)
         Me.lbl_artistname.ForeColor = System.Drawing.Color.FromArgb(CType(CType(218, Byte), Integer), CType(CType(222, Byte), Integer), CType(CType(212, Byte), Integer))
-        Me.lbl_artistname.Location = New System.Drawing.Point(44, 118)
+        Me.lbl_artistname.Location = New System.Drawing.Point(38, 102)
         Me.lbl_artistname.Name = "lbl_artistname"
         Me.lbl_artistname.Size = New System.Drawing.Size(61, 17)
         Me.lbl_artistname.TabIndex = 6
@@ -141,37 +141,37 @@ Partial Class M_artists
         '
         'txt_country
         '
-        Me.txt_country.Font = New System.Drawing.Font("Acumin Pro", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
-        Me.txt_country.Location = New System.Drawing.Point(41, 221)
+        Me.txt_country.Font = New System.Drawing.Font("Acumin Pro", 12.0!)
+        Me.txt_country.Location = New System.Drawing.Point(35, 192)
         Me.txt_country.Name = "txt_country"
-        Me.txt_country.Size = New System.Drawing.Size(281, 27)
+        Me.txt_country.Size = New System.Drawing.Size(241, 27)
         Me.txt_country.TabIndex = 5
         '
         'txt_artistname
         '
-        Me.txt_artistname.Font = New System.Drawing.Font("Acumin Pro", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
-        Me.txt_artistname.Location = New System.Drawing.Point(41, 149)
+        Me.txt_artistname.Font = New System.Drawing.Font("Acumin Pro", 12.0!)
+        Me.txt_artistname.Location = New System.Drawing.Point(35, 129)
         Me.txt_artistname.Name = "txt_artistname"
-        Me.txt_artistname.Size = New System.Drawing.Size(281, 27)
+        Me.txt_artistname.Size = New System.Drawing.Size(241, 27)
         Me.txt_artistname.TabIndex = 5
         '
         'pb_artist
         '
         Me.pb_artist.Image = Global.Project_201314707.My.Resources.Resources.artist_g
-        Me.pb_artist.Location = New System.Drawing.Point(141, 26)
+        Me.pb_artist.Location = New System.Drawing.Point(121, 23)
         Me.pb_artist.Name = "pb_artist"
-        Me.pb_artist.Size = New System.Drawing.Size(80, 80)
+        Me.pb_artist.Size = New System.Drawing.Size(69, 69)
         Me.pb_artist.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
         Me.pb_artist.TabIndex = 3
         Me.pb_artist.TabStop = False
         '
         'M_artists
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(7.0!, 15.0!)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.FromArgb(CType(CType(60, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(61, Byte), Integer))
         Me.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom
-        Me.ClientSize = New System.Drawing.Size(385, 480)
+        Me.ClientSize = New System.Drawing.Size(330, 475)
         Me.Controls.Add(Me.pnl_login)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
