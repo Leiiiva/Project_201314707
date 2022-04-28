@@ -24,6 +24,7 @@ Partial Class Reports
     Private Sub InitializeComponent()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(Reports))
         Me.pnl_login = New System.Windows.Forms.Panel()
+        Me.DataGridView1 = New System.Windows.Forms.DataGridView()
         Me.grpbx_reports = New System.Windows.Forms.GroupBox()
         Me.rbtn_top3genre = New System.Windows.Forms.RadioButton()
         Me.rbtn_top3songs = New System.Windows.Forms.RadioButton()
@@ -33,24 +34,37 @@ Partial Class Reports
         Me.rbtn_sngartist = New System.Windows.Forms.RadioButton()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.btn_back = New System.Windows.Forms.Button()
+        Me.btn_save = New System.Windows.Forms.Button()
         Me.btn_generate = New System.Windows.Forms.Button()
         Me.pb_reports = New System.Windows.Forms.PictureBox()
+        Me.sfd = New System.Windows.Forms.SaveFileDialog()
         Me.pnl_login.SuspendLayout()
+        CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.grpbx_reports.SuspendLayout()
         CType(Me.pb_reports, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'pnl_login
         '
+        Me.pnl_login.Controls.Add(Me.DataGridView1)
         Me.pnl_login.Controls.Add(Me.grpbx_reports)
         Me.pnl_login.Controls.Add(Me.Label1)
         Me.pnl_login.Controls.Add(Me.btn_back)
+        Me.pnl_login.Controls.Add(Me.btn_save)
         Me.pnl_login.Controls.Add(Me.btn_generate)
         Me.pnl_login.Controls.Add(Me.pb_reports)
         Me.pnl_login.Location = New System.Drawing.Point(12, 12)
         Me.pnl_login.Name = "pnl_login"
-        Me.pnl_login.Size = New System.Drawing.Size(345, 469)
+        Me.pnl_login.Size = New System.Drawing.Size(664, 886)
         Me.pnl_login.TabIndex = 6
+        '
+        'DataGridView1
+        '
+        Me.DataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.DataGridView1.Location = New System.Drawing.Point(47, 448)
+        Me.DataGridView1.Name = "DataGridView1"
+        Me.DataGridView1.Size = New System.Drawing.Size(570, 398)
+        Me.DataGridView1.TabIndex = 18
         '
         'grpbx_reports
         '
@@ -62,7 +76,7 @@ Partial Class Reports
         Me.grpbx_reports.Controls.Add(Me.rbtn_sngartist)
         Me.grpbx_reports.Font = New System.Drawing.Font("Acumin Pro", 11.25!)
         Me.grpbx_reports.ForeColor = System.Drawing.Color.FromArgb(CType(CType(218, Byte), Integer), CType(CType(222, Byte), Integer), CType(CType(212, Byte), Integer))
-        Me.grpbx_reports.Location = New System.Drawing.Point(15, 130)
+        Me.grpbx_reports.Location = New System.Drawing.Point(53, 132)
         Me.grpbx_reports.Name = "grpbx_reports"
         Me.grpbx_reports.Size = New System.Drawing.Size(315, 219)
         Me.grpbx_reports.TabIndex = 17
@@ -170,13 +184,26 @@ Partial Class Reports
         Me.btn_back.TabIndex = 14
         Me.btn_back.UseVisualStyleBackColor = True
         '
+        'btn_save
+        '
+        Me.btn_save.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom
+        Me.btn_save.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btn_save.Font = New System.Drawing.Font("Acumin Pro", 12.0!)
+        Me.btn_save.ForeColor = System.Drawing.Color.FromArgb(CType(CType(218, Byte), Integer), CType(CType(222, Byte), Integer), CType(CType(212, Byte), Integer))
+        Me.btn_save.Location = New System.Drawing.Point(475, 284)
+        Me.btn_save.Name = "btn_save"
+        Me.btn_save.Size = New System.Drawing.Size(86, 30)
+        Me.btn_save.TabIndex = 13
+        Me.btn_save.Text = "Guardar"
+        Me.btn_save.UseVisualStyleBackColor = True
+        '
         'btn_generate
         '
         Me.btn_generate.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom
         Me.btn_generate.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.btn_generate.Font = New System.Drawing.Font("Acumin Pro", 12.0!)
         Me.btn_generate.ForeColor = System.Drawing.Color.FromArgb(CType(CType(218, Byte), Integer), CType(CType(222, Byte), Integer), CType(CType(212, Byte), Integer))
-        Me.btn_generate.Location = New System.Drawing.Point(129, 387)
+        Me.btn_generate.Location = New System.Drawing.Point(475, 176)
         Me.btn_generate.Name = "btn_generate"
         Me.btn_generate.Size = New System.Drawing.Size(86, 30)
         Me.btn_generate.TabIndex = 13
@@ -186,7 +213,7 @@ Partial Class Reports
         'pb_reports
         '
         Me.pb_reports.Image = Global.Project_201314707.My.Resources.Resources.reports_g
-        Me.pb_reports.Location = New System.Drawing.Point(138, 43)
+        Me.pb_reports.Location = New System.Drawing.Point(299, 43)
         Me.pb_reports.Name = "pb_reports"
         Me.pb_reports.Size = New System.Drawing.Size(69, 69)
         Me.pb_reports.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
@@ -199,7 +226,7 @@ Partial Class Reports
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.FromArgb(CType(CType(60, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(61, Byte), Integer))
         Me.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom
-        Me.ClientSize = New System.Drawing.Size(371, 489)
+        Me.ClientSize = New System.Drawing.Size(690, 906)
         Me.Controls.Add(Me.pnl_login)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
@@ -208,6 +235,7 @@ Partial Class Reports
         Me.Text = "Reports"
         Me.pnl_login.ResumeLayout(False)
         Me.pnl_login.PerformLayout()
+        CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.grpbx_reports.ResumeLayout(False)
         Me.grpbx_reports.PerformLayout()
         CType(Me.pb_reports, System.ComponentModel.ISupportInitialize).EndInit()
@@ -227,4 +255,7 @@ Partial Class Reports
     Friend WithEvents rbtn_playlistscreated As RadioButton
     Friend WithEvents rbtn_timesinplaylist As RadioButton
     Friend WithEvents rbtn_sngartist As RadioButton
+    Friend WithEvents DataGridView1 As DataGridView
+    Friend WithEvents btn_save As Button
+    Friend WithEvents sfd As SaveFileDialog
 End Class

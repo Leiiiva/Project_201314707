@@ -27,3 +27,5 @@ D:\Documents\GitHub\Project_201314707\Project_201314707\Project_201314707\bin\De
 D:\Documents\GitHub\Project_201314707\Project_201314707\Project_201314707\obj\Debug\net472\Project_201314707.vbproj.CopyComplete
 D:\Documents\GitHub\Project_201314707\Project_201314707\Project_201314707\obj\Debug\net472\Project_201314707.exe
 D:\Documents\GitHub\Project_201314707\Project_201314707\Project_201314707\obj\Debug\net472\Project_201314707.pdb
+D:\Documents\GitHub\Project_201314707\Project_201314707\Project_201314707\bin\Debug\net472\BouncyCastle.Crypto.dll
+D:\Documents\GitHub\Project_201314707\Project_201314707\Project_201314707\bin\Debug\net472\itextsharp.dll

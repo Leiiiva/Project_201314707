@@ -3,6 +3,8 @@ Imports System.Data.SqlClient
 Imports System.Text
 Imports System.Security.Cryptography
 
+
+
 Module PM
 
     Public conn As String = "Data Source=DESKTOP-OLRU951\SQLEXPRESS;Initial Catalog=DB_201314707;Integrated Security=True"
@@ -606,7 +608,7 @@ Module PM
     End Sub
 
     Function GetSPath(name As String) As String
-        Dim ID As String
+        Dim ID As String = ""
         myConn.ConnectionString = conn
         myConn.Open()
         Try
@@ -627,8 +629,27 @@ Module PM
         Return ID
     End Function
 
+    'Reporting
+    Sub GenerateReport(sqlstr As String)
+        Try
+            myConn.ConnectionString = conn
+            myConn.Open()
+            Dim cmd As New SqlCommand(sqlstr, myConn)
+            Dim da As New SqlDataAdapter
+            'cmd.Connection = myConn
+            da.SelectCommand = cmd
+            Dim dt As New DataTable
+            dt.Clear()
+            da.Fill(dt)
+            Reports.DataGridView1.DataSource = Nothing
+            Reports.DataGridView1.Rows.Clear()
+            Reports.DataGridView1.DataSource = dt
+            myConn.Close()
+        Catch ex As Exception
 
-    'REPORTING SECTION
+            MsgBox(ex.Message.ToString(), vbExclamation, "Error")
 
+        End Try
+    End Sub
 
 End Module

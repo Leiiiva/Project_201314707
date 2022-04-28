@@ -1,9 +1,11 @@
 {
   "version": 2,
-  "dgSpecHash": "9UJFnzv01fABM8uDB/a6FHTRWW1Ja0QDRSdFYlSWCGFqfsVh52KHV82tfwLI6kOhZZbY2e9jUVBzLSRs22zaFg==",
+  "dgSpecHash": "RBRQmVV93hpPSiqDTgegVrjDkTd/d8p7l0TeFkpqvN84nTzsc5IMKaVM7IMAQd/yV7F2lY0Vl+Ar736qTsr5lw==",
   "success": true,
   "projectFilePath": "D:\\Documents\\GitHub\\Project_201314707\\Project_201314707\\Project_201314707\\Project_201314707.vbproj",
   "expectedPackageFiles": [
+    "C:\\Users\\Leiva\\.nuget\\packages\\bouncycastle\\1.8.9\\bouncycastle.1.8.9.nupkg.sha512",
+    "C:\\Users\\Leiva\\.nuget\\packages\\itextsharp\\5.5.13.3\\itextsharp.5.5.13.3.nupkg.sha512",
     "C:\\Users\\Leiva\\.nuget\\packages\\system.data.sqlclient\\4.8.3\\system.data.sqlclient.4.8.3.nupkg.sha512"
   ],
   "logs": []
