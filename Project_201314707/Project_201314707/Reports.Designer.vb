@@ -76,7 +76,7 @@ Partial Class Reports
         Me.grpbx_reports.Controls.Add(Me.rbtn_sngartist)
         Me.grpbx_reports.Font = New System.Drawing.Font("Acumin Pro", 11.25!)
         Me.grpbx_reports.ForeColor = System.Drawing.Color.FromArgb(CType(CType(218, Byte), Integer), CType(CType(222, Byte), Integer), CType(CType(212, Byte), Integer))
-        Me.grpbx_reports.Location = New System.Drawing.Point(53, 132)
+        Me.grpbx_reports.Location = New System.Drawing.Point(72, 167)
         Me.grpbx_reports.Name = "grpbx_reports"
         Me.grpbx_reports.Size = New System.Drawing.Size(315, 219)
         Me.grpbx_reports.TabIndex = 17
@@ -190,7 +190,7 @@ Partial Class Reports
         Me.btn_save.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.btn_save.Font = New System.Drawing.Font("Acumin Pro", 12.0!)
         Me.btn_save.ForeColor = System.Drawing.Color.FromArgb(CType(CType(218, Byte), Integer), CType(CType(222, Byte), Integer), CType(CType(212, Byte), Integer))
-        Me.btn_save.Location = New System.Drawing.Point(475, 284)
+        Me.btn_save.Location = New System.Drawing.Point(479, 319)
         Me.btn_save.Name = "btn_save"
         Me.btn_save.Size = New System.Drawing.Size(86, 30)
         Me.btn_save.TabIndex = 13
@@ -203,7 +203,7 @@ Partial Class Reports
         Me.btn_generate.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.btn_generate.Font = New System.Drawing.Font("Acumin Pro", 12.0!)
         Me.btn_generate.ForeColor = System.Drawing.Color.FromArgb(CType(CType(218, Byte), Integer), CType(CType(222, Byte), Integer), CType(CType(212, Byte), Integer))
-        Me.btn_generate.Location = New System.Drawing.Point(475, 176)
+        Me.btn_generate.Location = New System.Drawing.Point(479, 211)
         Me.btn_generate.Name = "btn_generate"
         Me.btn_generate.Size = New System.Drawing.Size(86, 30)
         Me.btn_generate.TabIndex = 13
