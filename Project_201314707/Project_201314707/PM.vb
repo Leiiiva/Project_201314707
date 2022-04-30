@@ -127,7 +127,6 @@ Module PM
                                 Form1.pb_status2.Visible = True
                                 Form1.pb_user.Image = Image.FromFile(picture)
                                 Form1.lbl_username.Text = username
-                                Update_PLS()
                                 Form1.Visible = True
                                 myConn.Close()
                             Catch ex As SqlException
@@ -136,7 +135,7 @@ Module PM
                         End Using
                     End Using
                 Catch ex As Exception
-                    MsgBox("Error entering data", vbExclamation, "Error")
+                    MsgBox(ex.Message.ToString(), vbExclamation, "Error")
                 End Try
             Else
                 MsgBox("Invalid Password", vbExclamation, "Check Password")
@@ -300,8 +299,9 @@ Module PM
             If ValidRegisterP(password) = True Then
                 user_password = Cypher(password)
                 Try
+                    myConn.ConnectionString = conn
                     Dim query As String = String.Empty
-                    query &= "UPDATE Users(name, username, password, type, picture) VALUES (@name,@username,@password,@type,@picture) WHERE username = '" & Form1.lbl_username.Text & "'"
+                    query &= "UPDATE [dbo].[Users] SET [name] = @name,[username] = @username, [password] = @password,[type] = 'cliente',[picture] = @picture WHERE username = '" & Form1.lbl_username.Text & "'"
                     Using myConn
                         Using myCmd As New SqlCommand()
                             With myCmd
@@ -311,19 +311,18 @@ Module PM
                                 .Parameters.AddWithValue("@name", name)
                                 .Parameters.AddWithValue("@username", username)
                                 .Parameters.AddWithValue("@password", user_password)
-                                .Parameters.AddWithValue("@type", "cliente")
                                 .Parameters.AddWithValue("@picture", picpath)
                             End With
                             Try
                                 myConn.Open()
                                 myCmd.ExecuteNonQuery()
-                                MsgBox("User registration completed !", vbInformation, "Completed !")
-                                Register.Close()
+                                MsgBox("User Update completed !", vbInformation, "Completed !")
                                 Form1.pnl_start.Visible = False
                                 Form1.pnl_left.Visible = True
                                 Form1.pnl_bottom.Visible = True
                                 Form1.lbl_server.Visible = True
                                 Form1.pb_status2.Visible = True
+                                Form1.pb_user.Image = Nothing
                                 Form1.pb_user.Image = Image.FromFile(picpath)
                                 Form1.lbl_username.Text = username
                                 Form1.Visible = True
@@ -334,7 +333,7 @@ Module PM
                         End Using
                     End Using
                 Catch ex As Exception
-                    MsgBox("Error entering data", vbExclamation, "Error")
+                    MsgBox(ex.Message.ToString(), vbExclamation, "Error")
                 End Try
             Else
                 MsgBox("Invalid Password", vbExclamation, "Check Password")
